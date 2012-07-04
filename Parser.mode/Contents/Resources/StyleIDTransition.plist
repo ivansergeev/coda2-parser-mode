@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+	<key>/Parser/P3 Characters</key>
+	<string>_Default.Characters</string>
+
+	<key>/Parser/P3 Types</key>
+	<string>_Default.Keywords</string>
+	<key>/Parser/P3 Keywords</key>
+	<string>_Default.Keywords</string>
+
+
+	<key>/Parser/P3 Base Classes</key>
+	<string>_Default.FunctionRegex</string>
+	<key>/Parser/P3 Classes</key>
+	<string>_Default.FunctionRegex</string>
+
+
+	<key>/Parser/P3 User Method</key>
+	<string>_Default.FunctionRegex</string>
+	<key>/Parser/P3 Call User Method</key>
+	<string>_Default.FunctionRegex</string>
+
+
+	<key>/Parser/P3 Variables</key>
+	<string>_Default.Keywords</string>
+
+
+	<key>/Parser/P3 Numbers</key>
+	<string>_Default.Numbers</string>
+	<key>/Parser/P3 Boolean</key>
+	<string>_Default.Numbers</string>
+	<key>/Parser/P3 String</key>
+	<string>String</string>
+	<key>/Parser/P3 RegExp</key>
+	<string>/Regular Expressions/</string>
+
+
+	<key>/Parser/P3 Block Comment</key>
+	<string>Comment</string>
+	<key>/Parser/P3 Inline Comment</key>
+	<string>Comment</string>
+	<key>/Parser/P3 Single Comment</key>
+	<string>Comment</string>
+	<key>/Parser/P3 TODO Comment</key>
+	<string>Comment</string>
+	<key>/Parser/P3 Autodoc Comment</key>
+	<string>AutodocComment</string>
+
+	<key>_Default</key>
+	<string>_Default</string>
+
+</dict>
+</plist>

@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	
+	<key>Comments</key>	
+	<dict>
+		<key>EndTag</key>
+		<string>}</string>
+		<key>StartTag</key>
+		<string>^rem{</string>
+	</dict>
+
+	<key>SymbolTableContext</key>
+	<dict>
+		<key>IncludeContexts</key>
+		<array>
+			<dict>
+				<key>State</key>
+				<string>SEEMode.Parser</string>
+				<key>Type</key>
+				<string>Parser Include</string>
+			</dict>
+		</array>
+		<key>MatchContexts</key>
+		<array>
+			<dict>
+				<key>State</key>
+				<string>SEEMode.Parser</string>
+				<key>Type</key>
+				<string>P3 Base Classes</string>
+			</dict>
+			<dict>
+				<key>State</key>
+				<string>SEEMode.Parser</string>
+				<key>Type</key>
+				<string>P3 Classes</string>
+			</dict>
+			<dict>
+				<key>State</key>
+				<string>SEEMode.Parser</string>
+				<key>Type</key>
+				<string>P3 Types</string>
+			</dict>
+			<dict>
+				<key>State</key>
+				<string>SEEMode.Parser</string>
+				<key>Type</key>
+				<string>P3 Variable</string>
+			</dict>
+			<dict>
+				<key>State</key>
+				<string>SEEMode.Parser</string>
+				<key>Type</key>
+				<string>P3 Attributes</string>
+			</dict>
+		</array>
+	</dict>
+
+	<key>Completions</key>
+	<array>
+
+<!-- ^hash -->
+		<dict>	
+			<key>ID</key>
+			<string>^hash</string>
+			<key>String</key>
+			<string>^hash</string>
+			<key>SelectionRange</key>
+			<string>{5, 0}</string>
+			<!-- <key>PostString</key> -->
+			<!-- <string>::</string> -->
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+					<key>PostString</key>
+					<string>[]</string>
+					<key>String</key>
+					<string>::create</string>
+				</dict>
+				<dict>
+					<key>MoveCursor</key>
+					<integer>1</integer>
+					<key>PostString</key>
+					<string>{}</string>
+					<key>String</key>
+					<string>::sql</string>
+				</dict>
+				<dict>
+					<key>MoveCursor</key>
+					<integer>-1</integer>
+					<key>PostString</key>
+					<string>[ $.limit(n) ]</string>
+					<key>String</key>
+					<string>::sql{}</string>
+				</dict>
+			</array>
+		</dict>
+
+<!-- ^rem -->
+		<dict>
+			<key>ID</key>
+			<string>^rem</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+			<key>PostString</key>
+			<string></string>
+			<key>String</key>
+			<string>^rem</string>
+		</dict>
+
+<!-- ^string -->
+		<dict>
+			<key>ID</key>
+			<string>^string</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+			<key>PostString</key>
+			<string></string>
+			<key>String</key>
+			<string>^string</string>
+		</dict>
+
+<!-- ^table -->
+		<dict>
+			<key>ID</key>
+			<string>^table</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+			<key>PostString</key>
+			<string></string>
+			<key>String</key>
+			<string>^table</string>
+		</dict>
+
+<!-- $._d -->
+		<dict>	
+			<key>ID</key>
+			<string>$._default</string>
+			<key>String</key>
+			<string>$._default</string>
+		</dict>
+
+<!-- $.d -->
+		<dict>	
+			<key>ID</key>
+			<string>$.domain</string>
+			<key>String</key>
+			<string>$.domain</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
+<!-- $.e -->
+		<dict>	
+			<key>ID</key>
+			<string>$.expires()</string>
+			<key>String</key>
+			<string>$.expires()</string>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>$.expires[]</string>
+			<key>String</key>
+			<string>$.expires[]</string>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>$.expires[session]</string>
+			<key>String</key>
+			<string>$.expires[session]</string>
+		</dict>
+
+<!-- $.h -->
+		<dict>	
+			<key>ID</key>
+			<string>$.httponly</string>
+			<key>String</key>
+			<string>$.httponly</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
+<!-- $.p -->
+		<dict>	
+			<key>ID</key>
+			<string>$.path</string>
+			<key>String</key>
+			<string>$.path</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
+<!-- $cookie -->
+		<dict>	
+			<key>ID</key>
+			<string>$cookie</string>
+			<key>String</key>
+			<string>$cookie</string>
+			<key>PostString</key>
+			<string>:</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+			<key>SelectionRange</key>
+			<string>{8, 0}</string>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>String</key>
+					<string>fields</string>
+				</dict>
+			</array>
+		</dict>
+
+<!-- _d -->
+		<dict>
+			<key>ID</key>
+			<string>_default</string>
+			<key>String</key>
+			<string>_default</string>
+		</dict>	
+
+<!-- _a -->
+		<dict>	
+			<key>ID</key>
+			<string>_at</string>
+			<key>String</key>
+			<string>_at</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>_at[first]</string>
+			<key>String</key>
+			<string>_at[first]</string>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>_at[last]</string>
+			<key>String</key>
+			<string>_at[last]</string>
+		</dict>
+
+<!-- _c -->
+		<dict>	
+			<key>ID</key>
+			<string>_count[]</string>
+			<key>String</key>
+			<string>_count[]</string>
+		</dict>
+
+<!-- _k -->
+		<dict>	
+			<key>ID</key>
+			<string>_keys[]</string>
+			<key>String</key>
+			<string>_keys[]</string>
+		</dict>
+
+<!-- .a -->
+
+		<dict>	
+			<key>ID</key>
+			<string>.add</string>
+			<key>String</key>
+			<string>.add</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
+<!-- .c -->
+		<dict>	
+			<key>ID</key>
+			<string>.contains</string>
+			<key>String</key>
+			<string>.contains</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
+<!-- .d -->
+		<dict>
+			<key>ID</key>
+			<string>.delete</string>
+			<key>String</key>
+			<string>.delete</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
+<!-- .f -->
+		<dict>	
+			<key>ID</key>
+			<string>.fields</string>
+			<key>String</key>
+			<string>.fields</string>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>.foreach</string>
+			<key>String</key>
+			<string>.foreach</string>
+			<key>PostString</key>
+			<string>[key;value]{}</string>
+			<key>MoveCursor</key>
+			<integer>12</integer>
+		</dict>
+
+<!-- .i -->
+		<dict>	
+			<key>ID</key>
+			<string>.intersection</string>
+			<key>String</key>
+			<string>.intersection</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>.intersects</string>
+			<key>String</key>
+			<string>.intersects</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
+<!-- .s -->
+		<dict>	
+			<key>ID</key>
+			<string>.sub</string>
+			<key>String</key>
+			<string>.sub</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
+<!-- .u -->
+		<dict>	
+			<key>ID</key>
+			<string>.union</string>
+			<key>String</key>
+			<string>.union</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
+<!-- @a -->
+	<dict>
+		<key>ID</key>
+		<string>@auto</string>
+		<key>String</key>
+		<string>@auto</string>
+		<key>PostString</key>
+		<string>[]</string>
+		<key>MoveCursor</key>
+		<integer>3</integer>
+	</dict>
+
+<!-- @c -->
+		<dict>	
+			<key>ID</key>
+			<string>@CLASS</string>
+			<key>String</key>
+			<string>@CLASS</string>
+			<key>MoveCursor</key>
+			<integer>2</integer>
+			<key>PostString</key>
+			<string></string>
+		</dict>
+
+	</array>
+
+	<key>Contexts</key>
+	<array>
+
+<!--  @top -->
+<!-- ^top ^top:attributes ^top[attributes] ^top{attributes} + -->
+<!-- $top $top(attribute) $top.attribute $top:attribute + -->
+<!-- $.top $.top() $.top[] + -->
+<!-- .top .top[] + -->
+<!-- ^if(-top ) ^if(-top ) -->
+
+<!-- variable._top -->
+
+	<dict>
+		<key>Regex</key>
+		<string>([\$\^]\w{1,512}\.?)(?&lt;top&gt;([\.\_][!\-\w]*))\z</string>
+		<key>ShouldAppendCompletion</key>
+		<false/>
+		<key>ShouldCompleteAll</key>
+		<false/>
+		<key>ShouldCompleteInStringLiteral</key>
+		<false/>
+	</dict>
+
+	<!-- $.top $.top(value) $.top{value} $.top[value]-->
+		<dict>
+			<key>Regex</key>
+			<string>(?&lt;top&gt;(\$\.)[!\-\w]+[\(\[\{]?(\w*)?[\)\]\}]?)\z</string>
+			<key>ShouldAppendCompletion</key>
+			<false/>
+			<key>ShouldCompleteAll</key>
+			<false/>
+			<key>ShouldCompleteInStringLiteral</key>
+			<false/>
+		</dict>
+
+ 	<!-- ^top ^top::attribute ^top:attribute -->
+
+		<dict>
+			<key>Regex</key>
+			<!-- <string>(?&lt;top&gt;([\^\$]?)\w+)(?&lt;attribute&gt;(\.|:|::)?[!\-\w]*)?\z</string> -->
+			<string>(?&lt;top&gt;\^[!\-\w]+)(?&lt;attribute&gt;(:|::)[!\-\w]*)?\z</string>
+			<key>ShouldAppendCompletion</key>
+			<false/>
+			<key>ShouldCompleteAll</key>
+			<false/>
+			<key>ShouldCompleteInStringLiteral</key>
+			<false/>
+		</dict>
+
+		<!-- $top $top:attribute $top.attribute -->
+
+ 		<dict>
+			<key>Regex</key>
+			<string>(?&lt;top&gt;\$[!\-\w]+)(?&lt;attribute&gt;(\.|:|\._)[!\-\w]*)?\z</string>
+			<key>ShouldAppendCompletion</key>
+			<false/>
+			<key>ShouldCompleteAll</key>
+			<false/>
+			<key>ShouldCompleteInStringLiteral</key>
+			<false/>
+		</dict>
+
+		<!-- .top $top ^top .top[]  $top(attribute) ^top{attribute} ^top[attribute]  -->
+
+		<dict>
+			<key>Regex</key>
+			<string>(?&lt;top&gt;(\$|\^|\.)[!\-\w]+)[\[\(\{]?(?&lt;attribute&gt;[!\-\w]*)?[\]\)\}]?\z</string>
+			<key>ShouldAppendCompletion</key>
+			<false/>
+			<key>ShouldCompleteAll</key>
+			<false/>
+			<key>ShouldCompleteInStringLiteral</key>
+			<false/>
+		</dict>
+
+	
+
+		<!-- ^if(-top ) ^if(-top ) -->
+
+		<dict>
+			<key>Regex</key>
+			<string>\^if\(\s*(?&lt;top&gt;\-[!\-\w]+)(\s*\))?\z</string>
+			<key>ShouldAppendCompletion</key>
+			<false/>
+			<key>ShouldCompleteAll</key>
+			<false/>
+			<key>ShouldCompleteInStringLiteral</key>
+			<false/>
+		</dict>
+
+	</array>
+
+
+	<key>Name</key>
+	<string>Parser</string>
+
+	<key>VariablePrefixes</key>
+	<array>
+		<string>$</string>
+		<string>^</string>
+	</array>
+
+</dict>
+</plist>

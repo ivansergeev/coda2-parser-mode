@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE syntax SYSTEM "symbol.dtd">
+<symbols>
+
+
+    <!-- Parser -->
+
+    <blocks>
+        <beginregex>([^\$]{)</beginregex>
+        <endregex>}</endregex>
+    </blocks>
+
+
+    <!-- find: $variable -->
+    
+    <symbol id="P3 Variables" indentation="0" useforautocomplete="yes" hidden="yes">
+        <!-- $variable $variable.variable -->
+        <regex>(\$[\w\.]{1,512})</regex>
+        <!-- ${variable} ${variable.variable} -->
+        <regex>(\$\{[\w\.]{1,512}\}?)</regex>
+    </symbol> 
+    
+    <symbol id="P3 Call Variables" indentation="0" useforautocomplete="yes" hidden="yes">
+        
+    </symbol> 
+    
+
+    <symbol id="P3 Base Classes" image="SymbolC" indentation="0" ignoreblocks="no" useforautocomplete="no">
+
+       <!-- find: @CLASS, @USE, @OPTIONS, @BASE, @auto -->
+       <regex>^(\@(CLASS|USE|OPTIONS|BASE|auto\[\w*\]))</regex>
+        <postprocess>
+            <find>[\n\r]</find>
+            <replace></replace>
+            <find>[ \t]+</find>
+            <replace></replace>
+        </postprocess>
+    </symbol>
+
+   <!--  <symbol id="P3 Attributes" image="SymbolMark" indentation="0" ignoreblocks="no" useforautocomplete="yes">
+       <regex>\$\w+{1,512}\.(_\w+{1,512})</regex>
+    </symbol> -->
+
+    <symbol id="P3 User Method" image="SymbolM" indentation="0" ignoreblocks="no" useforautocomplete="yes">
+        
+        <!-- с аргументами не работает подстановка ^ -->
+       <!-- <regex>^\@(?!CLASS|USE|auto\[)(?'name'\w{1,512}\[(?'arguments'[^\]]{0,512})\])</regex> -->
+       
+       <!-- find: @method[], exclude: @CLASS, @USE, @OPTIONS, @BASE, @auto[ -->
+       <regex>^\@(?!CLASS|USE|OPTIONS|BASE|auto\[)(?'name'\w{1,512})</regex>
+        <postprocess>
+            <find>[\n\r]</find>
+            <replace> </replace>
+            <find>[ \t]+</find>
+            <replace></replace>
+
+            <!-- add: ^ -->
+            <find>(^\b\w)</find>
+            <replace>\^\1</replace>
+        </postprocess>
+
+         <!-- without arguments -->
+        <movecursor>2</movecursor>
+        <poststring>[]</poststring>
+
+        <!-- with arguments -->
+        <!-- <arguments>([\^A-Za-z0-9_]+)[;]*</arguments> -->
+        <!-- <variables>(?'name'[\w\d]{1,512})</variables> -->
+    </symbol>
+
+
+    <!-- P3 TODO -->
+    <!--
+    <symbol id="P3 TODO" font-weight="bold" font-style="normal" image="SymbolD" indentation="0" ignoreblocks="yes" show-in-comments="yes">
+        <beginregex>^#(TODO)</beginregex>
+        <endregex>[\n\r]</endregex>
+    </symbol>
+    -->
+
+    <!-- Коментарий сроки -->
+    <!-- find: # comment -->
+    <symbol id="Pragma Marks" font-weight="normal" font-style="normal" image="SymbolMark" indentation="0" ignoreblocks="no" show-in-comments="yes">
+        <beginregex>^#</beginregex>
+        <endregex>[\n\r]</endregex>
+    </symbol>
+
+    <!-- Коментарий в конце кода -->
+    <!-- find: code ^rem{ comment } -->
+    <symbol id="Pragma marks" font-weight="normal" font-style="normal" image="SymbolMark" indentation="0" ignoreblocks="no" show-in-comments="yes">
+        <regex>[^(\^rem\{)]\^rem\{!(.*)\}</regex>
+    </symbol>
+
+     <!-- Коментарий блока -->
+     <!-- find: ^rem{ ... } -->
+    <symbol id="Pragma marks" font-weight="normal" font-style="normal" image="SymbolMark" indentation="0" ignoreblocks="no" show-in-comments="yes">
+        <beginregex>^\^rem\{</beginregex>
+        <endregex>^}</endregex>
+    </symbol>
+
+</symbols>
+

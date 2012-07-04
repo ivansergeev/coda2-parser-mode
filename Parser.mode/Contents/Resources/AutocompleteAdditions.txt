@@ -1,0 +1,9 @@
+^hash
+^string
+^rem
+$cookie
+$.expires
+$.httponly
+$.path
+true
+false
