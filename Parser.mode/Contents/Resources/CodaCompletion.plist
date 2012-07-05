@@ -60,6 +60,96 @@
 	<key>Completions</key>
 	<array>
 
+<!-- ^curl -->
+		<dict>	
+			<key>ID</key>
+			<string>^curl</string>
+			<key>String</key>
+			<string>^curl</string>
+			<key>SelectionRange</key>
+			<string>{5, 0}</string>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>String</key>
+					<string>:load</string>
+					<key>MoveCursor</key>
+					<integer>1</integer>
+					<key>PostString</key>
+					<string>[]</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>:options</string>
+					<key>MoveCursor</key>
+					<integer>1</integer>
+					<key>PostString</key>
+					<string>[]</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>:session</string>
+					<key>MoveCursor</key>
+					<integer>1</integer>
+					<key>PostString</key>
+					<string>{}</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>:version[]</string>
+				</dict>
+			</array>
+		</dict>
+
+<!-- ^date -->
+		<dict>	
+			<key>ID</key>
+			<string>^date</string>
+			<key>String</key>
+			<string>^date</string>
+			<key>SelectionRange</key>
+			<string>{5, 0}</string>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>String</key>
+					<string>::create</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>::now</string>
+					<key>MoveCursor</key>
+					<integer>1</integer>
+					<key>PostString</key>
+					<string>()</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>::now[]</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>:calendar</string>
+					<key>MoveCursor</key>
+					<integer>1</integer>
+					<key>PostString</key>
+					<string>[rus](;)</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>:last-day</string>
+					<key>MoveCursor</key>
+					<integer>1</integer>
+					<key>PostString</key>
+					<string>(;)</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>:today[]</string>
+				</dict>
+			</array>
+		</dict>
+
 <!-- ^double -->
 		<dict>	
 			<key>ID</key>
@@ -277,6 +367,28 @@
 			<string>$._default</string>
 		</dict>
 
+<!-- $.c -->
+		<dict>	
+			<key>ID</key>
+			<string>$.charset</string>
+			<key>String</key>
+			<string>$.charset</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>$.content-type</string>
+			<key>String</key>
+			<string>$.content-type</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
 <!-- $.d -->
 		<dict>	
 			<key>ID</key>
@@ -360,11 +472,45 @@
 <!-- $.l -->
 		<dict>	
 			<key>ID</key>
+			<string>$.library</string>
+			<key>String</key>
+			<string>$.library</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+		<dict>	
+			<key>ID</key>
 			<string>$.limit</string>
 			<key>String</key>
 			<string>$.limit</string>
 			<key>PostString</key>
 			<string>()</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
+<!-- $.m -->
+		<dict>	
+			<key>ID</key>
+			<string>$.mode</string>
+			<key>String</key>
+			<string>$.mode</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
+<!-- $.m -->
+		<dict>	
+			<key>ID</key>
+			<string>$.name</string>
+			<key>String</key>
+			<string>$.name</string>
+			<key>PostString</key>
+			<string>[]</string>
 			<key>MoveCursor</key>
 			<integer>1</integer>
 		</dict>
@@ -422,13 +568,55 @@
 			<key>MoveCursor</key>
 			<integer>1</integer>
 		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>$.ssl_verifypeer</string>
+			<key>String</key>
+			<string>$.ssl_verifypeer</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
 
 <!-- $.t -->
+		<dict>
+			<key>ID</key>
+			<string>$.timeout</string>
+			<key>String</key>
+			<string>$.timeout</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
 		<dict>	
 			<key>ID</key>
 			<string>$.type</string>
 			<key>String</key>
 			<string>$.type</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
+<!-- $.u -->
+		<dict>
+			<key>ID</key>
+			<string>$.url</string>
+			<key>String</key>
+			<string>$.url</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>$.useragent</string>
+			<key>String</key>
+			<string>$.useragent</string>
 			<key>PostString</key>
 			<string>[]</string>
 			<key>MoveCursor</key>
@@ -632,6 +820,18 @@
 <!-- .d -->
 		<dict>
 			<key>ID</key>
+			<string>.day</string>
+			<key>String</key>
+			<string>.day</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.daylightsaving</string>
+			<key>String</key>
+			<string>.daylightsaving</string>
+		</dict>
+		<dict>
+			<key>ID</key>
 			<string>.dec</string>
 			<key>String</key>
 			<string>.dec</string>
@@ -715,6 +915,14 @@
 			<integer>1</integer>
 		</dict>
 
+<!-- .g -->
+		<dict>	
+			<key>ID</key>
+			<string>.gmt-string[]</string>
+			<key>String</key>
+			<string>.gmt-string[]</string>
+		</dict>
+
 <!-- .h -->
 		<dict>	
 			<key>ID</key>
@@ -725,6 +933,12 @@
 			<string>[]</string>
 			<key>MoveCursor</key>
 			<integer>1</integer>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>.hour</string>
+			<key>String</key>
+			<string>.hour</string>
 		</dict>
 
 <!-- .i -->
@@ -788,6 +1002,12 @@
 		</dict>
 
 <!-- .l -->
+		<dict>	
+			<key>ID</key>
+			<string>.last-day[]</string>
+			<key>String</key>
+			<string>.last-day[]</string>
+		</dict>
 		<dict>
 			<key>ID</key>
 			<string>.line</string>
@@ -818,9 +1038,15 @@
 		</dict>
 		<dict>	
 			<key>ID</key>
-			<string>.mul</string>
+			<string>.minute</string>
 			<key>String</key>
-			<string>.mul</string>
+			<string>.minute</string>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>.mod</string>
+			<key>String</key>
+			<string>.mod</string>
 			<key>PostString</key>
 			<string>()</string>
 			<key>MoveCursor</key>
@@ -828,9 +1054,15 @@
 		</dict>
 		<dict>	
 			<key>ID</key>
-			<string>.mod</string>
+			<string>.month</string>
 			<key>String</key>
-			<string>.mod</string>
+			<string>.month</string>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>.mul</string>
+			<key>String</key>
+			<string>.mul</string>
 			<key>PostString</key>
 			<string>()</string>
 			<key>MoveCursor</key>
@@ -859,6 +1091,48 @@
 			<integer>1</integer>
 		</dict>
 
+<!-- .r -->
+		<dict>
+			<key>ID</key>
+			<string>.roll[day]</string>
+			<key>String</key>
+			<string>.roll[day]</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.roll[month]</string>
+			<key>String</key>
+			<string>.roll[month]</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.roll[TZ]</string>
+			<key>String</key>
+			<string>.roll[TZ]</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>.roll[year]</string>
+			<key>String</key>
+			<string>.roll[year]</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
 <!-- .s -->
 		
 		<dict>
@@ -873,19 +1147,29 @@
 		</dict>
 		<dict>
 			<key>ID</key>
-			<string>.save[nameless;]</string>
+			<string>.second</string>
 			<key>String</key>
-			<string>.save[nameless;]</string>
-			<key>MoveCursor</key>
-			<integer>-1</integer>
+			<string>.second</string>
 		</dict>
 		<dict>
 			<key>ID</key>
-			<string>.save[append;]</string>
+			<string>.save[nameless</string>
 			<key>String</key>
-			<string>.save[append;]</string>
+			<string>.save[nameless</string>
+				<key>PostString</key>
+			<string>;]</string>
 			<key>MoveCursor</key>
-			<integer>-1</integer>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.save[append</string>
+			<key>String</key>
+			<string>.save[append</string>
+			<key>PostString</key>
+			<string>;]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
 		</dict>
 		<dict>	
 			<key>ID</key>
@@ -905,6 +1189,33 @@
 		</dict>
 		<dict>	
 			<key>ID</key>
+			<string>.sql-string</string>
+			<key>String</key>
+			<string>.sql-string</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>SelectionRange</key>
+			<string>{12, 0}</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>String</key>
+					<string>date</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>datetime</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>time</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>	
+			<key>ID</key>
 			<string>.sub</string>
 			<key>String</key>
 			<string>.sub</string>
@@ -912,6 +1223,14 @@
 			<string>[]</string>
 			<key>MoveCursor</key>
 			<integer>1</integer>
+		</dict>
+
+<!-- .TZ -->
+		<dict>	
+			<key>ID</key>
+			<string>.TZ</string>
+			<key>String</key>
+			<string>.TZ</string>
 		</dict>
 
 <!-- .u -->
@@ -924,6 +1243,50 @@
 			<string>[]</string>
 			<key>MoveCursor</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.unix-timestamp</string>
+			<key>String</key>
+			<string>.unix-timestamp</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>2</integer>
+		</dict>
+
+<!-- .w -->
+		<dict>
+			<key>ID</key>
+			<string>.week</string>
+			<key>String</key>
+			<string>.week</string>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>.weekday</string>
+			<key>String</key>
+			<string>.weekday</string>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>.weekyear</string>
+			<key>String</key>
+			<string>.weekyear</string>
+		</dict>
+
+<!-- .y -->
+		<dict>	
+			<key>ID</key>
+			<string>.year</string>
+			<key>String</key>
+			<string>.year</string>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>.yearday</string>
+			<key>String</key>
+			<string>.yearday</string>
 		</dict>
 
 <!-- @a -->
@@ -1030,7 +1393,7 @@
 
 		<dict>
 			<key>Regex</key>
-			<string>(?&lt;top&gt;(\$|\^|\.)[!\-\w]+)[\[\(\{]?(?&lt;attribute&gt;[!\-\w]*)?[\]\)\}]?\z</string>
+			<string>(?&lt;top&gt;(\$|\^|\.)[!\-\w]+)[\[\(\{]?(?&lt;attribute&gt;[\-\w]*)?[\]\)\}]?\z</string>
 			<key>ShouldAppendCompletion</key>
 			<false/>
 			<key>ShouldCompleteAll</key>
