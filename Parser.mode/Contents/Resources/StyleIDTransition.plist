@@ -37,6 +37,10 @@
 	<key>/Parser/P3 RegExp</key>
 	<string>/Regular Expressions/</string>
 
+	<key>/Parser/P3 String</key>
+	<string>String</string>
+	<key>/Parser/P3 Single String</key>
+	<string>String2</string>
 
 	<key>/Parser/P3 Block Comment</key>
 	<string>Comment</string>

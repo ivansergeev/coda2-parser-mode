@@ -69,10 +69,18 @@
 				<regex>(?&lt;![\w\d\._])((?:(?:(?:[0-9]+\.[0-9]*)|(\.[0-9]+))(?:[eE][+\-]?[0-9]+)?[fFlL]?)|(?:(?:(?:[1-9][0-9]*)|0(?:[1-7][0-7]*)?|(?:0[xX][0-9a-fA-F]+))(?:(?:[uU][lL]?)|(?:[lL][uU]?))?))(?![\w\d\._])</regex>
             </keywords>
 
-            <keywords id="P3 Boolean" inverted-color="#5d56ff" useforautocomplete="yes" scope="constant.numeric.keyword.p3">
+            <keywords id="P3 Boolean" inverted-color="#5d56ff" useforautocomplete="yes" >
                 <string>true</string>
                 <string>false</string>
             </keywords>
+
+           <!--  <state id="P3 String" type="string"  color="#825900"  scope="string.double">
+                <begin><regex>([^\=]"\w*")</regex></begin>
+                 <end><regex>[\n\r]</regex></end>
+            </state>
+            <state id="P3 Single String" type="string"  color="#825900"  scope="string.single">
+                <begin><regex>([^\=]'\w*')</regex></begin>
+            </state> -->
 
             <keywords id="P3 Variables" casesensitive="yes" useforautocomplete="yes" scope="language.variable.strings.p3">
 
@@ -145,13 +153,6 @@
                 	<end><regex>.</regex></end>	
                 </state>
 
-            </state>
-            -->
-
-            <!--
-            <state id="P3 String" type="string" scope="string.double.p3">
-                <begin><regex></regex></begin>
-                <end><regex></regex></end>
             </state>
             -->
 

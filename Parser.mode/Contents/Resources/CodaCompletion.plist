@@ -60,6 +60,59 @@
 	<key>Completions</key>
 	<array>
 
+<!-- ^caller -->
+		<dict>	
+			<key>ID</key>
+			<string>^caller</string>
+			<key>String</key>
+			<string>^caller</string>
+		</dict>
+
+<!-- ^# -->
+<!-- 
+		<dict>	
+			<key>ID</key>
+			<string>^#</string>
+			<key>String</key>
+			<string>^#</string>
+			<key>SelectionRange</key>
+			<string>{2, 0}</string>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>String</key>
+					<string>20</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>A0</string>
+				</dict>
+			</array>
+		</dict> 
+-->
+
+<!-- ^BASE -->
+		<dict>	
+			<key>ID</key>
+			<string>^BASE</string>
+			<key>String</key>
+			<string>^BASE</string>
+			<key>SelectionRange</key>
+			<string>{6, 0}</string>
+			<key>PostString</key>
+			<string>:</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
+<!-- ^break[] -->
+		<dict>	
+			<key>ID</key>
+			<string>^break[]</string>
+			<key>String</key>
+			<string>^break[]</string>
+		</dict>
+
 <!-- ^curl -->
 		<dict>	
 			<key>ID</key>
@@ -99,6 +152,14 @@
 					<string>:version[]</string>
 				</dict>
 			</array>
+		</dict>
+
+<!-- ^continue[] -->
+		<dict>	
+			<key>ID</key>
+			<string>^continue[]</string>
+			<key>String</key>
+			<string>^continue[]</string>
 		</dict>
 
 <!-- ^date -->
@@ -179,6 +240,34 @@
 			</array>
 		</dict>
 
+<!-- ^eval() -->
+		<dict>	
+			<key>ID</key>
+			<string>^eval</string>
+			<key>String</key>
+			<string>^eval</string>
+			<key>SelectionRange</key>
+			<string>{6, 0}</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
+<!-- ^for -->
+		<dict>	
+			<key>ID</key>
+			<string>^for</string>
+			<key>String</key>
+			<string>^for</string>
+			<key>SelectionRange</key>
+			<string>{8, 0}</string>
+			<key>PostString</key>
+			<string>[i](;){}</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
 <!-- ^hash -->
 		<dict>	
 			<key>ID</key>
@@ -214,6 +303,75 @@
 					<string>[ $.limit(0) ]</string>
 					<key>String</key>
 					<string>::sql{}</string>
+				</dict>
+			</array>
+		</dict>
+
+<!-- ^if -->
+		<dict>	
+			<key>ID</key>
+			<string>^if</string>
+			<key>String</key>
+			<string>^if</string>
+			<key>SelectionRange</key>
+			<string>{4, 0}</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+			<key>PostString</key>
+			<string>(){}</string>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>String</key>
+					<string>def</string>
+					<key>PostString</key>
+					<string> </string>
+					<key>MoveCursor</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>in</string>
+					<key>PostString</key>
+					<string> ""</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>is double</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>is hash</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>is int</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>is string</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>is table</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>-d</string>
+					<key>PostString</key>
+					<string> ""</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>-f</string>
+					<key>PostString</key>
+					<string> ""</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
 				</dict>
 			</array>
 		</dict>
@@ -270,6 +428,15 @@
 			<key>String</key>
 			<string>^string</string>
 		</dict>
+
+<!-- ^switch -->
+		<dict>	
+			<key>ID</key>
+			<string>^switch</string>
+			<key>String</key>
+			<string>^switch</string>
+		</dict>
+
 
 <!-- ^table -->
 		<dict>	
@@ -346,6 +513,21 @@
 				</dict>
 			</array>
 		</dict>
+
+<!-- ^while -->
+		<dict>	
+			<key>ID</key>
+			<string>^while</string>
+			<key>String</key>
+			<string>^while</string>
+			<key>SelectionRange</key>
+			<string>{7, 0}</string>
+			<key>PostString</key>
+			<string>(){}</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
 
 <!-- $.b -->
 		<dict>	
@@ -623,6 +805,36 @@
 			<integer>1</integer>
 		</dict>
 
+
+<!--  $console -->
+		<dict>	
+			<key>ID</key>
+			<string>$console</string>
+			<key>String</key>
+			<string>$console</string>
+			<key>SelectionRange</key>
+			<string>{9, 0}</string>
+			<key>PostString</key>
+			<string>:</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>String</key>
+					<string>line</string>
+				</dict>
+			</array>
+		</dict>
+
+<!-- $caller -->
+		<dict>	
+			<key>ID</key>
+			<string>$caller</string>
+			<key>String</key>
+			<string>$caller</string>
+		</dict>
+
 <!-- $cookie -->
 		<dict>	
 			<key>ID</key>
@@ -640,6 +852,72 @@
 				<dict>
 					<key>String</key>
 					<string>fields</string>
+				</dict>
+			</array>
+		</dict>
+
+<!-- $env -->
+		<dict>	
+			<key>ID</key>
+			<string>$env</string>
+			<key>String</key>
+			<string>$env</string>
+			<key>PostString</key>
+			<string>:</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+			<key>SelectionRange</key>
+			<string>{5, 0}</string>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>String</key>
+					<string>HTTP_</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>PARSER_VERSION</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>REMOTE_ADDR</string>
+				</dict>
+			</array>
+		</dict>
+
+<!-- $form -->
+		<dict>	
+			<key>ID</key>
+			<string>$form</string>
+			<key>String</key>
+			<string>$form</string>
+			<key>PostString</key>
+			<string>:</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+			<key>SelectionRange</key>
+			<string>{6, 0}</string>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>String</key>
+					<string>fields</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>files</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>imap</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>qtail</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>tables</string>
 				</dict>
 			</array>
 		</dict>
@@ -701,6 +979,148 @@
 			</array>
 		</dict>
 
+<!-- $result -->
+		<dict>	
+			<key>ID</key>
+			<string>$result</string>
+			<key>String</key>
+			<string>$result</string>
+		</dict>
+
+<!-- $self -->
+		<dict>	
+			<key>ID</key>
+			<string>$self</string>
+			<key>String</key>
+			<string>$self</string>
+		</dict>
+
+<!-- $xdoc -->
+		<dict>	
+			<key>ID</key>
+			<string>$xdoc</string>
+			<key>String</key>
+			<string>$xdoc</string>
+			<key>PostString</key>
+			<string>:</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+			<key>SelectionRange</key>
+			<string>{6, 0}</string>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>String</key>
+					<string>ELEMENT_NODE</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>ATTRIBUTE_NODE</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>TEXT_NODE</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>CDATA_SECTION_NODE</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>ENTITY_REFERENCE_NODE</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>ENTITY_NODE</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>PROCESSING_INSTRUCTION_NODE</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>COMMENT_NODE</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>DOCUMENT_NODE</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>DOCUMENT_TYPE_NODE</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>DOCUMENT_FRAGMENT_NODE</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>NOTATION_NODE</string>
+				</dict>
+			</array>
+		</dict>
+
+
+<!-- d -->
+	<!-- 	<dict>
+			<key>ID</key>
+			<string>def</string>
+			<key>String</key>
+			<string>def</string>
+
+			<key>PostString</key>
+			<string> </string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict> -->
+
+<!-- i -->
+		<dict>
+			<key>String</key>
+			<string>in</string>
+			<key>PostString</key>
+			<string> ""</string>
+			<key>MoveCursor</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>String</key>
+			<string>is double</string>
+		</dict>
+		<dict>
+			<key>String</key>
+			<string>is hash</string>
+		</dict>
+		<dict>
+			<key>String</key>
+			<string>is int</string>
+		</dict>
+		<dict>
+			<key>String</key>
+			<string>is string</string>
+		</dict>
+		<dict>
+			<key>String</key>
+			<string>is table</string>
+		</dict>
+
+<!-- f -->
+		<dict>	
+			<key>ID</key>
+			<string>false</string>
+			<key>String</key>
+			<string>false</string>
+		</dict>
+
+<!-- t -->
+		<dict>	
+			<key>ID</key>
+			<string>true</string>
+			<key>String</key>
+			<string>true</string>
+		</dict>
+
+
 <!-- _d -->
 		<dict>
 			<key>ID</key>
@@ -749,6 +1169,7 @@
 			<string>_keys[]</string>
 		</dict>
 
+
 <!-- .a -->
 
 		<dict>	
@@ -786,6 +1207,18 @@
 		</dict>
 
 <!-- .c -->
+		<dict>
+			<key>ID</key>
+			<string>.CLASS</string>
+			<key>String</key>
+			<string>.CLASS</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.CLASS_NAME</string>
+			<key>String</key>
+			<string>.CLASS_NAME</string>
+		</dict>
 		<dict>	
 			<key>ID</key>
 			<string>.columns</string>
@@ -1301,6 +1734,18 @@
 		<integer>3</integer>
 	</dict>
 
+<!-- @b -->
+		<dict>	
+			<key>ID</key>
+			<string>@BASE</string>
+			<key>String</key>
+			<string>@BASE</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+			<key>PostString</key>
+			<string></string>
+		</dict>
+
 <!-- @c -->
 		<dict>	
 			<key>ID</key>
@@ -1308,11 +1753,83 @@
 			<key>String</key>
 			<string>@CLASS</string>
 			<key>MoveCursor</key>
-			<integer>2</integer>
+			<integer>1</integer>
 			<key>PostString</key>
 			<string></string>
 		</dict>
 
+<!-- @g -->
+		<dict>	
+			<key>ID</key>
+			<string>@GET_</string>
+			<key>String</key>
+			<string>@GET_</string>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>@GET_DEFAULT[]</string>
+			<key>String</key>
+			<string>@GET_DEFAULT[]</string>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>@GET[]</string>
+			<key>String</key>
+			<string>@GET[]</string>
+		</dict>
+
+<!-- @o -->
+		<dict>	
+			<key>ID</key>
+			<string>@static:</string>
+			<key>String</key>
+			<string>@static:</string>
+		</dict>
+
+<!-- @o -->
+		<dict>	
+			<key>ID</key>
+			<string>@OPTIONS</string>
+			<key>String</key>
+			<string>@OPTIONS</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+			<key>PostString</key>
+			<string></string>
+		</dict>
+
+<!-- @s -->
+		<dict>	
+			<key>ID</key>
+			<string>@SET_</string>
+			<key>String</key>
+			<string>@SET_</string>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>@SET_DEFAULT</string>
+			<key>String</key>
+			<string>@SET_DEFAULT</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+			<key>PostString</key>
+			<string>[;]</string>
+		</dict>
+
+<!-- @u -->
+		<dict>	
+			<key>ID</key>
+			<string>@USE</string>
+			<key>String</key>
+			<string>@USE</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+			<key>PostString</key>
+			<string></string>
+		</dict>
+
+
+		
 	</array>
 
 	<key>Contexts</key>
@@ -1404,11 +1921,11 @@
 
 	
 
-		<!-- ^if(-top ) ^if(-top ) -->
+		<!-- ^if(top ) ^if(-top ) -->
 
 		<dict>
 			<key>Regex</key>
-			<string>\^if\(\s*(?&lt;top&gt;\-[!\-\w]+)(\s*\))?\z</string>
+			<string>\^if\((?\$\w*)\s?(?&lt;top&gt;\-?(\w\s)+)\s*\)\z</string>
 			<key>ShouldAppendCompletion</key>
 			<false/>
 			<key>ShouldCompleteAll</key>
