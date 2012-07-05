@@ -1,6 +1,10 @@
+^double
 ^hash
+^int
 ^string
+^table
 ^rem
+^void
 $cookie
 $.expires
 $.httponly

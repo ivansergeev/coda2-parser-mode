@@ -60,6 +60,35 @@
 	<key>Completions</key>
 	<array>
 
+<!-- ^double -->
+		<dict>	
+			<key>ID</key>
+			<string>^double</string>
+			<key>String</key>
+			<string>^double</string>
+			<key>SelectionRange</key>
+			<string>{7, 0}</string>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>MoveCursor</key>
+					<integer>1</integer>
+					<key>PostString</key>
+					<string>{}</string>
+					<key>String</key>
+					<string>:sql</string>
+				</dict>
+				<dict>
+					<key>MoveCursor</key>
+					<integer>-1</integer>
+					<key>PostString</key>
+					<string>[ $.limit(0) $.default(0) ]</string>
+					<key>String</key>
+					<string>:sql{}</string>
+				</dict>
+			</array>
+		</dict>
+
 <!-- ^hash -->
 		<dict>	
 			<key>ID</key>
@@ -92,9 +121,38 @@
 					<key>MoveCursor</key>
 					<integer>-1</integer>
 					<key>PostString</key>
-					<string>[ $.limit(n) ]</string>
+					<string>[ $.limit(0) ]</string>
 					<key>String</key>
 					<string>::sql{}</string>
+				</dict>
+			</array>
+		</dict>
+
+<!-- ^int -->
+		<dict>	
+			<key>ID</key>
+			<string>^int</string>
+			<key>String</key>
+			<string>^int</string>
+			<key>SelectionRange</key>
+			<string>{4, 0}</string>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>MoveCursor</key>
+					<integer>1</integer>
+					<key>PostString</key>
+					<string>{}</string>
+					<key>String</key>
+					<string>:sql</string>
+				</dict>
+				<dict>
+					<key>MoveCursor</key>
+					<integer>-1</integer>
+					<key>PostString</key>
+					<string>[ $.limit(0) $.default(0) ]</string>
+					<key>String</key>
+					<string>:sql{}</string>
 				</dict>
 			</array>
 		</dict>
@@ -124,15 +182,91 @@
 		</dict>
 
 <!-- ^table -->
-		<dict>
+		<dict>	
 			<key>ID</key>
 			<string>^table</string>
-			<key>MoveCursor</key>
-			<string>1</string>
-			<key>PostString</key>
-			<string></string>
 			<key>String</key>
 			<string>^table</string>
+			<key>SelectionRange</key>
+			<string>{6, 0}</string>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>String</key>
+					<string>::create</string>
+				</dict>
+				<dict>
+					<key>MoveCursor</key>
+					<integer>1</integer>
+					<key>PostString</key>
+					<string>{}</string>
+					<key>String</key>
+					<string>::create[nameless]</string>
+				</dict>
+				<dict>
+					<key>MoveCursor</key>
+					<integer>1</integer>
+					<key>PostString</key>
+					<string>[]</string>
+					<key>String</key>
+					<string>::load</string>
+				</dict>
+				<dict>
+					<key>MoveCursor</key>
+					<integer>-1</integer>
+					<key>String</key>
+					<string>::load[nameless;]</string>
+				</dict>
+				<dict>
+					<key>MoveCursor</key>
+					<integer>1</integer>
+					<key>PostString</key>
+					<string>{}</string>
+					<key>String</key>
+					<string>::sql</string>
+				</dict>
+				<dict>
+					<key>MoveCursor</key>
+					<integer>-1</integer>
+					<key>PostString</key>
+					<string>[ $.limit() ]</string>
+					<key>String</key>
+					<string>::sql{}</string>
+				</dict>
+			</array>
+		</dict>
+
+<!-- ^void -->
+		<dict>	
+			<key>ID</key>
+			<string>^void</string>
+			<key>String</key>
+			<string>^void</string>
+			<key>SelectionRange</key>
+			<string>{5, 0}</string>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>MoveCursor</key>
+					<integer>1</integer>
+					<key>PostString</key>
+					<string>{}</string>
+					<key>String</key>
+					<string>::sql</string>
+				</dict>
+			</array>
+		</dict>
+
+<!-- $.b -->
+		<dict>	
+			<key>ID</key>
+			<string>$.bind</string>
+			<key>String</key>
+			<string>$.bind</string>
+			<key>PostString</key>
+			<string>[hash]</string>
+			<key>MoveCursor</key>
+			<integer>6</integer>
 		</dict>
 
 <!-- $._d -->
@@ -146,6 +280,32 @@
 <!-- $.d -->
 		<dict>	
 			<key>ID</key>
+			<string>$.default</string>
+			<key>String</key>
+			<string>$.default</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>$.distinct</string>
+			<key>String</key>
+			<string>$.distinct</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>$.distinct[tables]</string>
+			<key>String</key>
+			<string>$.distinct[tables]</string>
+		</dict>
+		<dict>	
+			<key>ID</key>
 			<string>$.domain</string>
 			<key>String</key>
 			<string>$.domain</string>
@@ -156,6 +316,16 @@
 		</dict>
 
 <!-- $.e -->
+		<dict>	
+			<key>ID</key>
+			<string>$.encloser</string>
+			<key>String</key>
+			<string>$.encloser</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
 		<dict>	
 			<key>ID</key>
 			<string>$.expires()</string>
@@ -187,12 +357,78 @@
 			<integer>1</integer>
 		</dict>
 
+<!-- $.l -->
+		<dict>	
+			<key>ID</key>
+			<string>$.limit</string>
+			<key>String</key>
+			<string>$.limit</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
+<!-- $.o -->
+		<dict>	
+			<key>ID</key>
+			<string>$.offset</string>
+			<key>String</key>
+			<string>$.offset</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>$.offset[cur]</string>
+			<key>String</key>
+			<string>$.offset[cur]</string>
+		</dict>
+
 <!-- $.p -->
 		<dict>	
 			<key>ID</key>
 			<string>$.path</string>
 			<key>String</key>
 			<string>$.path</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
+<!-- $.r -->
+		<dict>	
+			<key>ID</key>
+			<string>$.reverse</string>
+			<key>String</key>
+			<string>$.reverse</string>
+			<key>PostString</key>
+			<string>(true)</string>
+			<key>MoveCursor</key>
+			<integer>6</integer>
+		</dict>
+
+<!-- $.s -->
+		<dict>	
+			<key>ID</key>
+			<string>$.separator</string>
+			<key>String</key>
+			<string>$.separator</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
+<!-- $.t -->
+		<dict>	
+			<key>ID</key>
+			<string>$.type</string>
+			<key>String</key>
+			<string>$.type</string>
 			<key>PostString</key>
 			<string>[]</string>
 			<key>MoveCursor</key>
@@ -216,6 +452,63 @@
 				<dict>
 					<key>String</key>
 					<string>fields</string>
+				</dict>
+			</array>
+		</dict>
+
+<!-- $request -->
+		<dict>	
+			<key>ID</key>
+			<string>$request</string>
+			<key>String</key>
+			<string>$request</string>
+			<key>PostString</key>
+			<string>:</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+			<key>SelectionRange</key>
+			<string>{9, 0}</string>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>String</key>
+					<string>argv</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>body</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>charset</string>
+					<key>PostString</key>
+					<string>[]</string>
+					<key>MoveCursor</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>document-root</string>
+					<key>PostString</key>
+					<string>[]</string>
+					<key>MoveCursor</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>post-body</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>post-charset</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>query</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>uri</string>
 				</dict>
 			</array>
 		</dict>
@@ -280,8 +573,41 @@
 			<key>MoveCursor</key>
 			<integer>1</integer>
 		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>.append</string>
+			<key>String</key>
+			<string>.append</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
+<!-- .b -->
+
+		<dict>	
+			<key>ID</key>
+			<string>.bool</string>
+			<key>String</key>
+			<string>.bool</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
 
 <!-- .c -->
+		<dict>	
+			<key>ID</key>
+			<string>.columns</string>
+			<key>String</key>
+			<string>.columns</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>2</integer>
+		</dict>
 		<dict>	
 			<key>ID</key>
 			<string>.contains</string>
@@ -292,8 +618,34 @@
 			<key>MoveCursor</key>
 			<integer>1</integer>
 		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>.count</string>
+			<key>String</key>
+			<string>.count</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>2</integer>
+		</dict>
 
 <!-- .d -->
+		<dict>
+			<key>ID</key>
+			<string>.dec</string>
+			<key>String</key>
+			<string>.dec</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.dec[]</string>
+			<key>String</key>
+			<string>.dec[]</string>
+		</dict>
 		<dict>
 			<key>ID</key>
 			<string>.delete</string>
@@ -301,6 +653,26 @@
 			<string>.delete</string>
 			<key>PostString</key>
 			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.div</string>
+			<key>String</key>
+			<string>.div</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.double</string>
+			<key>String</key>
+			<string>.double</string>
+			<key>PostString</key>
+			<string>()</string>
 			<key>MoveCursor</key>
 			<integer>1</integer>
 		</dict>
@@ -314,6 +686,16 @@
 		</dict>
 		<dict>	
 			<key>ID</key>
+			<string>.flip</string>
+			<key>String</key>
+			<string>.flip</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>2</integer>
+		</dict>
+		<dict>	
+			<key>ID</key>
 			<string>.foreach</string>
 			<key>String</key>
 			<string>.foreach</string>
@@ -322,8 +704,56 @@
 			<key>MoveCursor</key>
 			<integer>12</integer>
 		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.format</string>
+			<key>String</key>
+			<string>.format</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
+<!-- .h -->
+		<dict>	
+			<key>ID</key>
+			<string>.hash</string>
+			<key>String</key>
+			<string>.hash</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
 
 <!-- .i -->
+		<dict>	
+			<key>ID</key>
+			<string>.inc</string>
+			<key>String</key>
+			<string>.inc</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>.inc[]</string>
+			<key>String</key>
+			<string>.inc[]</string>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>.int</string>
+			<key>String</key>
+			<string>.int</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
 		<dict>	
 			<key>ID</key>
 			<string>.intersection</string>
@@ -341,11 +771,138 @@
 			<string>.intersects</string>
 			<key>PostString</key>
 			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
+<!-- .j -->
+		<dict>	
+			<key>ID</key>
+			<string>.join</string>
+			<key>String</key>
+			<string>.join</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
+<!-- .l -->
+		<dict>
+			<key>ID</key>
+			<string>.line</string>
+			<key>String</key>
+			<string>.line</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>.locate</string>
+			<key>String</key>
+			<string>.locate</string>
+		</dict>
+
+<!-- .m -->
+		<dict>	
+			<key>ID</key>
+			<string>.menu</string>
+			<key>String</key>
+			<string>.menu</string>
+			<key>PostString</key>
+			<string>{}</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>.mul</string>
+			<key>String</key>
+			<string>.mul</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>.mod</string>
+			<key>String</key>
+			<string>.mod</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
+<!-- .o -->
+		<dict>	
+			<key>ID</key>
+			<string>.offset</string>
+			<key>String</key>
+			<string>.offset</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.offset[cur]</string>
+			<key>String</key>
+			<string>.offset[cur]</string>
+			<key>PostString</key>
+			<string>()</string>
 			<key>MoveCursor</key>
 			<integer>1</integer>
 		</dict>
 
 <!-- .s -->
+		
+		<dict>
+			<key>ID</key>
+			<string>.save</string>
+			<key>String</key>
+			<string>.save</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.save[nameless;]</string>
+			<key>String</key>
+			<string>.save[nameless;]</string>
+			<key>MoveCursor</key>
+			<integer>-1</integer>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.save[append;]</string>
+			<key>String</key>
+			<string>.save[append;]</string>
+			<key>MoveCursor</key>
+			<integer>-1</integer>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>.select</string>
+			<key>String</key>
+			<string>.select</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>.sort</string>
+			<key>String</key>
+			<string>.sort</string>
+		</dict>
 		<dict>	
 			<key>ID</key>
 			<string>.sub</string>
@@ -444,11 +1001,23 @@
 			<false/>
 		</dict>
 
-		<!-- $top $top:attribute $top.attribute -->
+		<!-- $top $top:attribute  -->
 
  		<dict>
 			<key>Regex</key>
-			<string>(?&lt;top&gt;\$[!\-\w]+)(?&lt;attribute&gt;(\.|:|\._)[!\-\w]*)?\z</string>
+			<string>(?&lt;top&gt;\$[!\-\w]+)\:(?&lt;attribute&gt;[!\-\w]*)?\z</string>
+			<key>ShouldAppendCompletion</key>
+			<false/>
+			<key>ShouldCompleteAll</key>
+			<false/>
+			<key>ShouldCompleteInStringLiteral</key>
+			<false/>
+		</dict>
+
+		<!-- $top.attribute $top._attribute -->
+		<dict>
+			<key>Regex</key>
+			<string>(?&lt;top&gt;\$[!\-\w]+)(?&lt;attribute&gt;(\.|\._)[!\-\w]*)?\z</string>
 			<key>ShouldAppendCompletion</key>
 			<false/>
 			<key>ShouldCompleteAll</key>
