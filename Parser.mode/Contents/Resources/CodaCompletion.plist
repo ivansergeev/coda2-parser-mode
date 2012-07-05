@@ -5,10 +5,8 @@
 	
 	<key>Comments</key>	
 	<dict>
-		<key>EndTag</key>
-		<string>}</string>
-		<key>StartTag</key>
-		<string>^rem{</string>
+		<key>StartTag</key><string>^rem{</string>
+		<key>EndTag</key><string>}</string>
 	</dict>
 
 	<key>SymbolTableContext</key>
@@ -54,19 +52,19 @@
 				<key>Type</key>
 				<string>P3 Attributes</string>
 			</dict>
+			<dict>
+				<key>State</key>
+				<string>SEEMode.Parser</string>
+				<key>Type</key>
+				<string>P3 Method</string>
+			</dict>
 		</array>
 	</dict>
 
 	<key>Completions</key>
 	<array>
 
-<!-- ^caller -->
-		<dict>	
-			<key>ID</key>
-			<string>^caller</string>
-			<key>String</key>
-			<string>^caller</string>
-		</dict>
+
 
 <!-- ^# -->
 <!-- 
@@ -97,8 +95,6 @@
 			<string>^BASE</string>
 			<key>String</key>
 			<string>^BASE</string>
-			<key>SelectionRange</key>
-			<string>{6, 0}</string>
 			<key>PostString</key>
 			<string>:</string>
 			<key>MoveCursor</key>
@@ -113,14 +109,56 @@
 			<string>^break[]</string>
 		</dict>
 
+<!-- ^caller -->
+		<dict>	
+			<key>ID</key>
+			<string>^caller</string>
+			<key>String</key>
+			<string>^caller</string>
+		</dict>
+
+<!-- ^cache -->
+		<dict>	
+			<key>ID</key>
+			<string>^cache[]()</string>
+			<key>String</key>
+			<string>^cache[]()</string>
+			<key>PostString</key>
+			<string>{}</string>
+			<key>SelectionRange</key>
+			<string>{7, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>file</string>
+			</array>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>^cache[][]</string>
+			<key>String</key>
+			<string>^cache[][]</string>
+			<key>PostString</key>
+			<string>{}</string>
+			<key>SelectionRange</key>
+			<string>{7, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>file</string>
+			</array>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>^cache[]</string>
+			<key>String</key>
+			<string>^cache[]</string>
+		</dict>
+
 <!-- ^curl -->
 		<dict>	
 			<key>ID</key>
 			<string>^curl</string>
 			<key>String</key>
 			<string>^curl</string>
-			<key>SelectionRange</key>
-			<string>{5, 0}</string>
 			<key>Children</key>
 			<array>
 				<dict>
@@ -138,6 +176,12 @@
 					<integer>1</integer>
 					<key>PostString</key>
 					<string>[]</string>
+					<key>SelectionRange</key>
+					<string>{9, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>options</string>
+					</array>
 				</dict>
 				<dict>
 					<key>String</key>
@@ -146,6 +190,12 @@
 					<integer>1</integer>
 					<key>PostString</key>
 					<string>{}</string>
+					<key>SelectionRange</key>
+					<string>{9, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>code</string>
+					</array>
 				</dict>
 				<dict>
 					<key>String</key>
@@ -168,8 +218,6 @@
 			<string>^date</string>
 			<key>String</key>
 			<string>^date</string>
-			<key>SelectionRange</key>
-			<string>{5, 0}</string>
 			<key>Children</key>
 			<array>
 				<dict>
@@ -178,23 +226,35 @@
 				</dict>
 				<dict>
 					<key>String</key>
-					<string>::now</string>
-					<key>MoveCursor</key>
-					<integer>1</integer>
-					<key>PostString</key>
-					<string>()</string>
+					<string>::now(0)</string>
+					<key>SelectionRange</key>
+					<string>{6, 1}</string>
 				</dict>
 				<dict>
 					<key>String</key>
 					<string>::now[]</string>
 				</dict>
 				<dict>
+					<key>ID</key>
+					<string>::unix-timestamp</string>
+					<key>String</key>
+					<string>::unix-timestamp</string>
+					<key>PostString</key>
+					<string>()</string>
+					<key>SelectionRange</key>
+					<string>{17, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>timestamp</string>
+					</array>
+				</dict>
+				<dict>
 					<key>String</key>
 					<string>:calendar</string>
-					<key>MoveCursor</key>
-					<integer>1</integer>
 					<key>PostString</key>
 					<string>[rus](;)</string>
+					<key>SelectionRange</key>
+					<string>{10, 3}</string>
 				</dict>
 				<dict>
 					<key>String</key>
@@ -217,25 +277,31 @@
 			<string>^double</string>
 			<key>String</key>
 			<string>^double</string>
-			<key>SelectionRange</key>
-			<string>{7, 0}</string>
 			<key>Children</key>
 			<array>
 				<dict>
-					<key>MoveCursor</key>
-					<integer>1</integer>
-					<key>PostString</key>
-					<string>{}</string>
-					<key>String</key>
-					<string>:sql</string>
-				</dict>
-				<dict>
-					<key>MoveCursor</key>
-					<integer>-1</integer>
-					<key>PostString</key>
-					<string>[ $.limit(0) $.default(0) ]</string>
 					<key>String</key>
 					<string>:sql{}</string>
+					<key>PostString</key>
+					<string></string>
+					<key>SelectionRange</key>
+					<string>{5, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>query</string>
+					</array>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>:sql{}[ $.limit(0) $.default(0) ]</string>
+					<key>PostString</key>
+					<string></string>
+					<key>SelectionRange</key>
+					<string>{5, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>query</string>
+					</array>
 				</dict>
 			</array>
 		</dict>
@@ -246,8 +312,6 @@
 			<string>^eval</string>
 			<key>String</key>
 			<string>^eval</string>
-			<key>SelectionRange</key>
-			<string>{6, 0}</string>
 			<key>PostString</key>
 			<string>()</string>
 			<key>MoveCursor</key>
@@ -264,8 +328,6 @@
 			<string>{8, 0}</string>
 			<key>PostString</key>
 			<string>[i](;){}</string>
-			<key>MoveCursor</key>
-			<integer>1</integer>
 		</dict>
 
 <!-- ^hash -->
@@ -274,35 +336,39 @@
 			<string>^hash</string>
 			<key>String</key>
 			<string>^hash</string>
-			<key>SelectionRange</key>
-			<string>{5, 0}</string>
-			<!-- <key>PostString</key> -->
-			<!-- <string>::</string> -->
 			<key>Children</key>
 			<array>
 				<dict>
+					<key>String</key>
+					<string>::create</string>
 					<key>MoveCursor</key>
 					<integer>2</integer>
 					<key>PostString</key>
-					<string>[]</string>
-					<key>String</key>
-					<string>::create</string>
+					<string>[]</string> 
 				</dict>
 				<dict>
-					<key>MoveCursor</key>
-					<integer>1</integer>
-					<key>PostString</key>
-					<string>{}</string>
-					<key>String</key>
-					<string>::sql</string>
-				</dict>
-				<dict>
-					<key>MoveCursor</key>
-					<integer>-1</integer>
-					<key>PostString</key>
-					<string>[ $.limit(0) ]</string>
 					<key>String</key>
 					<string>::sql{}</string>
+					<key>PostString</key>
+					<string></string>
+					<key>SelectionRange</key>
+					<string>{6, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>query</string>
+					</array>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>::sql{}[ $.limit(0) ]</string>
+					<key>PostString</key>
+					<string></string>
+					<key>SelectionRange</key>
+					<string>{6, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>query</string>
+					</array>
 				</dict>
 			</array>
 		</dict>
@@ -334,8 +400,12 @@
 					<string>in</string>
 					<key>PostString</key>
 					<string> ""</string>
-					<key>MoveCursor</key>
-					<integer>2</integer>
+					<key>SelectionRange</key>
+					<string>{4, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>dir</string>
+					</array>
 				</dict>
 				<dict>
 					<key>String</key>
@@ -362,16 +432,24 @@
 					<string>-d</string>
 					<key>PostString</key>
 					<string> ""</string>
-					<key>MoveCursor</key>
-					<integer>2</integer>
+					<key>SelectionRange</key>
+					<string>{4, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>dir</string>
+					</array>
 				</dict>
 				<dict>
 					<key>String</key>
 					<string>-f</string>
 					<key>PostString</key>
 					<string> ""</string>
-					<key>MoveCursor</key>
-					<integer>2</integer>
+					<key>SelectionRange</key>
+					<string>{4, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>file</string>
+					</array>
 				</dict>
 			</array>
 		</dict>
@@ -387,20 +465,28 @@
 			<key>Children</key>
 			<array>
 				<dict>
-					<key>MoveCursor</key>
-					<integer>1</integer>
-					<key>PostString</key>
-					<string>{}</string>
-					<key>String</key>
-					<string>:sql</string>
-				</dict>
-				<dict>
-					<key>MoveCursor</key>
-					<integer>-1</integer>
-					<key>PostString</key>
-					<string>[ $.limit(0) $.default(0) ]</string>
 					<key>String</key>
 					<string>:sql{}</string>
+					<key>PostString</key>
+					<string></string>
+					<key>SelectionRange</key>
+					<string>{5, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>query</string>
+					</array>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>:sql{}[ $.limit(0) $.default(0) ]</string>
+					<key>PostString</key>
+					<string></string>
+					<key>SelectionRange</key>
+					<string>{5, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>query</string>
+					</array>
 				</dict>
 			</array>
 		</dict>
@@ -408,25 +494,27 @@
 <!-- ^rem -->
 		<dict>
 			<key>ID</key>
-			<string>^rem</string>
-			<key>MoveCursor</key>
-			<string>1</string>
+			<string>^rem{}</string>
+			<key>String</key>
+			<string>^rem{}</string>
 			<key>PostString</key>
 			<string></string>
-			<key>String</key>
-			<string>^rem</string>
+			<key>SelectionRange</key>
+			<string>{5, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>comment</string>
+			</array>
 		</dict>
 
 <!-- ^string -->
 		<dict>
 			<key>ID</key>
 			<string>^string</string>
-			<key>MoveCursor</key>
-			<string>1</string>
-			<key>PostString</key>
-			<string></string>
 			<key>String</key>
 			<string>^string</string>
+			<key>PostString</key>
+			<string></string>
 		</dict>
 
 <!-- ^switch -->
@@ -444,51 +532,91 @@
 			<string>^table</string>
 			<key>String</key>
 			<string>^table</string>
-			<key>SelectionRange</key>
-			<string>{6, 0}</string>
 			<key>Children</key>
 			<array>
 				<dict>
 					<key>String</key>
-					<string>::create</string>
-				</dict>
-				<dict>
-					<key>MoveCursor</key>
-					<integer>1</integer>
+					<string>::create{}</string>
 					<key>PostString</key>
-					<string>{}</string>
-					<key>String</key>
-					<string>::create[nameless]</string>
+					<string></string>
+					<key>SelectionRange</key>
+					<string>{9, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>data</string>
+					</array>
 				</dict>
 				<dict>
-					<key>MoveCursor</key>
-					<integer>1</integer>
+					<key>String</key>
+					<string>::create[]</string>
 					<key>PostString</key>
-					<string>[]</string>
-					<key>String</key>
-					<string>::load</string>
+					<string></string>
+					<key>SelectionRange</key>
+					<string>{9, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>table</string>
+					</array>
 				</dict>
 				<dict>
-					<key>MoveCursor</key>
-					<integer>-1</integer>
+					<key>String</key>
+					<string>::create[nameless]{}</string>
+					<key>PostString</key>
+					<string></string>
+					<key>SelectionRange</key>
+					<string>{19, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>data</string>
+					</array>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>::load[]</string>
+					<key>PostString</key>
+					<string></string>
+					<key>SelectionRange</key>
+					<string>{7, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>file</string>
+					</array>
+				</dict>
+				<dict>
 					<key>String</key>
 					<string>::load[nameless;]</string>
+					<key>PostString</key>
+					<string></string>
+					<key>SelectionRange</key>
+					<string>{16, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>file</string>
+					</array>
 				</dict>
 				<dict>
-					<key>MoveCursor</key>
-					<integer>1</integer>
-					<key>PostString</key>
-					<string>{}</string>
-					<key>String</key>
-					<string>::sql</string>
-				</dict>
-				<dict>
-					<key>MoveCursor</key>
-					<integer>-1</integer>
-					<key>PostString</key>
-					<string>[ $.limit() ]</string>
 					<key>String</key>
 					<string>::sql{}</string>
+					<key>PostString</key>
+					<string></string>
+					<key>SelectionRange</key>
+					<string>{6, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>query</string>
+					</array>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>::sql{}[ $.limit() ]</string>
+					<key>PostString</key>
+					<string></string>
+					<key>SelectionRange</key>
+					<string>{6, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>query</string>
+					</array>
 				</dict>
 			</array>
 		</dict>
@@ -499,17 +627,19 @@
 			<string>^void</string>
 			<key>String</key>
 			<string>^void</string>
-			<key>SelectionRange</key>
-			<string>{5, 0}</string>
 			<key>Children</key>
 			<array>
 				<dict>
-					<key>MoveCursor</key>
-					<integer>1</integer>
-					<key>PostString</key>
-					<string>{}</string>
 					<key>String</key>
-					<string>::sql</string>
+					<string>:sql{}</string>
+					<key>PostString</key>
+					<string></string>
+					<key>SelectionRange</key>
+					<string>{5, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>query</string>
+					</array>
 				</dict>
 			</array>
 		</dict>
@@ -524,8 +654,6 @@
 			<string>{7, 0}</string>
 			<key>PostString</key>
 			<string>(){}</string>
-			<key>MoveCursor</key>
-			<integer>1</integer>
 		</dict>
 
 
@@ -536,9 +664,9 @@
 			<key>String</key>
 			<string>$.bind</string>
 			<key>PostString</key>
-			<string>[hash]</string>
+			<string>[]</string>
 			<key>MoveCursor</key>
-			<integer>6</integer>
+			<integer>8</integer>
 		</dict>
 
 <!-- $._d -->
@@ -556,9 +684,9 @@
 			<key>String</key>
 			<string>$.charset</string>
 			<key>PostString</key>
-			<string>[]</string>
-			<key>MoveCursor</key>
-			<integer>1</integer>
+			<string>[UTF-8]</string>
+			<key>SelectionRange</key>
+			<string>{10, 5}</string>
 		</dict>
 		<dict>	
 			<key>ID</key>
@@ -646,9 +774,9 @@
 			<key>String</key>
 			<string>$.httponly</string>
 			<key>PostString</key>
-			<string>()</string>
-			<key>MoveCursor</key>
-			<integer>1</integer>
+			<string>(true)</string>
+			<key>SelectionRange</key>
+			<string>{11, 0}</string>
 		</dict>
 
 <!-- $.l -->
@@ -705,14 +833,16 @@
 			<string>$.offset</string>
 			<key>PostString</key>
 			<string>()</string>
-			<key>MoveCursor</key>
-			<integer>1</integer>
+			<key>SelectionRange</key>
+			<string>{9, 0}</string>
 		</dict>
 		<dict>	
 			<key>ID</key>
 			<string>$.offset[cur]</string>
 			<key>String</key>
 			<string>$.offset[cur]</string>
+			<key>SelectionRange</key>
+			<string>{9, 3}</string>
 		</dict>
 
 <!-- $.p -->
@@ -735,8 +865,8 @@
 			<string>$.reverse</string>
 			<key>PostString</key>
 			<string>(true)</string>
-			<key>MoveCursor</key>
-			<integer>6</integer>
+			<key>SelectionRange</key>
+			<string>{10, 4}</string>
 		</dict>
 
 <!-- $.s -->
@@ -816,8 +946,6 @@
 			<string>{9, 0}</string>
 			<key>PostString</key>
 			<string>:</string>
-			<key>MoveCursor</key>
-			<integer>1</integer>
 			<key>Children</key>
 			<array>
 				<dict>
@@ -843,8 +971,6 @@
 			<string>$cookie</string>
 			<key>PostString</key>
 			<string>:</string>
-			<key>MoveCursor</key>
-			<integer>1</integer>
 			<key>SelectionRange</key>
 			<string>{8, 0}</string>
 			<key>Children</key>
@@ -930,8 +1056,6 @@
 			<string>$request</string>
 			<key>PostString</key>
 			<string>:</string>
-			<key>MoveCursor</key>
-			<integer>1</integer>
 			<key>SelectionRange</key>
 			<string>{9, 0}</string>
 			<key>Children</key>
@@ -1003,8 +1127,6 @@
 			<string>$xdoc</string>
 			<key>PostString</key>
 			<string>:</string>
-			<key>MoveCursor</key>
-			<integer>1</integer>
 			<key>SelectionRange</key>
 			<string>{6, 0}</string>
 			<key>Children</key>
@@ -1077,11 +1199,17 @@
 <!-- i -->
 		<dict>
 			<key>String</key>
-			<string>in</string>
-			<key>PostString</key>
-			<string> ""</string>
+			<string>in ""</string>
 			<key>MoveCursor</key>
 			<integer>2</integer>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{4, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>dir</string>
+			</array>
 		</dict>
 		<dict>
 			<key>String</key>
@@ -1145,12 +1273,16 @@
 			<string>_at[first]</string>
 			<key>String</key>
 			<string>_at[first]</string>
+			<key>SelectionRange</key>
+			<string>{4, 5}</string>
 		</dict>
 		<dict>	
 			<key>ID</key>
 			<string>_at[last]</string>
 			<key>String</key>
 			<string>_at[last]</string>
+			<key>SelectionRange</key>
+			<string>{4, 5}</string>
 		</dict>
 
 <!-- _c -->
@@ -1343,9 +1475,9 @@
 			<key>String</key>
 			<string>.format</string>
 			<key>PostString</key>
-			<string>[]</string>
-			<key>MoveCursor</key>
-			<integer>1</integer>
+			<string>[%.2f]</string>
+			<key>SelectionRange</key>
+			<string>{8, 4}</string>
 		</dict>
 
 <!-- .g -->
@@ -1570,13 +1702,11 @@
 		
 		<dict>
 			<key>ID</key>
-			<string>.save</string>
+			<string>.save[]</string>
 			<key>String</key>
-			<string>.save</string>
-			<key>PostString</key>
-			<string>[]</string>
-			<key>MoveCursor</key>
-			<integer>1</integer>
+			<string>.save[]</string>
+			<key>SelectionRange</key>
+			<string>{6, 0}</string>
 		</dict>
 		<dict>
 			<key>ID</key>
@@ -1586,33 +1716,29 @@
 		</dict>
 		<dict>
 			<key>ID</key>
-			<string>.save[nameless</string>
+			<string>.save[nameless;]</string>
 			<key>String</key>
-			<string>.save[nameless</string>
-				<key>PostString</key>
-			<string>;]</string>
-			<key>MoveCursor</key>
-			<integer>1</integer>
+			<string>.save[nameless;]</string>
+			<key>SelectionRange</key>
+			<string>{15, 0}</string>
 		</dict>
 		<dict>
 			<key>ID</key>
-			<string>.save[append</string>
+			<string>.save[append;]</string>
 			<key>String</key>
-			<string>.save[append</string>
-			<key>PostString</key>
-			<string>;]</string>
+			<string>.save[append;]</string>
 			<key>MoveCursor</key>
-			<integer>1</integer>
+			<integer>13</integer>
 		</dict>
 		<dict>	
 			<key>ID</key>
-			<string>.select</string>
+			<string>.select()</string>
 			<key>String</key>
-			<string>.select</string>
+			<string>.select()</string>
 			<key>PostString</key>
 			<string>()</string>
-			<key>MoveCursor</key>
-			<integer>1</integer>
+			<key>SelectionRange</key>
+			<string>{8, 0}</string>
 		</dict>
 		<dict>	
 			<key>ID</key>
@@ -1629,8 +1755,6 @@
 			<string>[]</string>
 			<key>SelectionRange</key>
 			<string>{12, 0}</string>
-			<key>MoveCursor</key>
-			<integer>1</integer>
 			<key>Children</key>
 			<array>
 				<dict>

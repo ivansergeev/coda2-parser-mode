@@ -41,6 +41,11 @@
        <regex>\$\w+{1,512}\.(_\w+{1,512})</regex>
     </symbol> -->
 
+    <!-- 
+    <symbol id="P3 Method" image="SymbolM" indentation="0" ignoreblocks="no" useforautocomplete="yes">
+    </symbol> 
+    -->
+
     <symbol id="P3 User Method" image="SymbolM" indentation="0" ignoreblocks="no" useforautocomplete="yes">
         
         <!-- с аргументами не работает подстановка ^ -->
@@ -66,6 +71,8 @@
         <!-- with arguments -->
         <!-- <arguments>([\^A-Za-z0-9_]+)[;]*</arguments> -->
         <!-- <variables>(?'name'[\w\d]{1,512})</variables> -->
+
+
     </symbol>
 
 
