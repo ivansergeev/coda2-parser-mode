@@ -89,6 +89,36 @@
 		</dict> 
 -->
 
+<!-- ^apply-taint -->
+		<dict>	
+			<key>ID</key>
+			<string>^apply-taint[]</string>
+			<key>String</key>
+			<string>^apply-taint[]</string>
+			<key>SelectionRange</key>
+			<string>{13, 0}</string>
+			<key>PostString</key>
+			<string></string>
+			<key>Parameters</key>
+			<array>
+				<string>text</string>
+			</array>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>^apply-taint[][]</string>
+			<key>String</key>
+			<string>^apply-taint[][]</string>
+			<key>SelectionRange</key>
+			<string>{13, 0}</string>
+			<key>PostString</key>
+			<string></string>
+			<key>Parameters</key>
+			<array>
+				<string>conversion</string>
+			</array>
+		</dict>
+
 <!-- ^BASE -->
 		<dict>	
 			<key>ID</key>
@@ -151,6 +181,22 @@
 			<string>^cache[]</string>
 			<key>String</key>
 			<string>^cache[]</string>
+		</dict>
+
+<!-- ^connect -->
+		<dict>	
+			<key>ID</key>
+			<string>^connect[$connect_string]{}</string>
+			<key>String</key>
+			<string>^connect[$connect_string]{}</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{26, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>code</string>
+			</array>
 		</dict>
 
 <!-- ^curl -->
@@ -491,6 +537,50 @@
 			</array>
 		</dict>
 
+<!-- ^process -->
+		<dict>	
+			<key>ID</key>
+			<string>^process{}</string>
+			<key>String</key>
+			<string>^process{}</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{9, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>string</string>
+			</array>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>^process[]{}</string>
+			<key>String</key>
+			<string>^process[]{}</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{9, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>context</string>
+			</array>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>^process[]{}[]</string>
+			<key>String</key>
+			<string>^process[]{}[]</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{9, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>context</string>
+			</array>
+		</dict>
+
 <!-- ^rem -->
 		<dict>
 			<key>ID</key>
@@ -525,6 +615,15 @@
 			<string>^switch</string>
 		</dict>
 
+<!-- ^sleep -->
+		<dict>	
+			<key>ID</key>
+			<string>^sleep()</string>
+			<key>String</key>
+			<string>^sleep()</string>
+			<key>SelectionRange</key>
+			<string>{7, 0}</string>
+		</dict>
 
 <!-- ^table -->
 		<dict>	
@@ -621,6 +720,176 @@
 			</array>
 		</dict>
 
+<!-- ^throw -->
+		<dict>	
+			<key>ID</key>
+			<string>^throw</string>
+			<key>String</key>
+			<string>^throw</string>
+			<key>SelectionRange</key>
+			<string>{7, 0}</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>Parameters</key>
+			<array>
+				<string>type;source;comment</string>
+			</array>
+		</dict>
+
+<!-- ^try -->
+		<dict>	
+			<key>ID</key>
+			<string>^try</string>
+			<key>String</key>
+			<string>^try</string>
+			<key>SelectionRange</key>
+			<string>{5, 0}</string>
+			<key>PostString</key>
+			<string>{}{}</string>
+		</dict>
+
+<!-- ^untaint -->
+		<dict>	
+			<key>ID</key>
+			<string>^taint[]</string>
+			<key>String</key>
+			<string>^taint[]</string>
+			<key>SelectionRange</key>
+			<string>{7, 0}</string>
+			<key>PostString</key>
+			<string></string>
+			<key>Parameters</key>
+			<array>
+				<string>text</string>
+			</array>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>^taint[][]</string>
+			<key>String</key>
+			<string>^taint[][]</string>
+			<key>SelectionRange</key>
+			<string>{7, 0}</string>
+			<key>PostString</key>
+			<string></string>
+			<key>Parameters</key>
+			<array>
+				<string>conversion</string>
+			</array>
+		</dict>
+
+<!-- ^untaint -->
+		<dict>	
+			<key>ID</key>
+			<string>^untaint{}</string>
+			<key>String</key>
+			<string>^untaint{}</string>
+			<key>SelectionRange</key>
+			<string>{9, 0}</string>
+			<key>PostString</key>
+			<string></string>
+			<key>Parameters</key>
+			<array>
+				<string>code</string>
+			</array>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>^untaint[]</string>
+			<key>String</key>
+			<string>^untaint[]</string>
+			<key>PostString</key>
+			<string>{}</string>
+			<key>SelectionRange</key>
+			<string>{9, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>conversion</string>
+			</array>
+			<!-- todo -->
+			<!-- 
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>String</key>
+					<string>as-is</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>file-spec</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>js</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>json</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>html</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>http-header</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>mail-header</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>optimized-as-is</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>optimized-html</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>optimized-xml</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>parser-code</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>regex</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>sql</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>uri</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>xml</string>
+				</dict>
+			</array> 
+			-->
+		</dict>
+
+<!-- ^use -->
+		<dict>	
+			<key>ID</key>
+			<string>^use[]</string>
+			<key>String</key>
+			<string>^use[]</string>
+			<key>SelectionRange</key>
+			<string>{5, 0}</string>
+			<key>PostString</key>
+			<string></string>
+			<key>Parameters</key>
+			<array>
+				<string>file</string>
+			</array>
+		</dict>
+
 <!-- ^void -->
 		<dict>	
 			<key>ID</key>
@@ -657,6 +926,19 @@
 		</dict>
 
 
+
+
+<!-- $._d -->
+		<dict>	
+			<key>ID</key>
+			<string>$._default</string>
+			<key>String</key>
+			<string>$._default</string>
+		</dict>
+
+
+
+
 <!-- $.b -->
 		<dict>	
 			<key>ID</key>
@@ -667,14 +949,6 @@
 			<string>[]</string>
 			<key>MoveCursor</key>
 			<integer>8</integer>
-		</dict>
-
-<!-- $._d -->
-		<dict>	
-			<key>ID</key>
-			<string>$._default</string>
-			<key>String</key>
-			<string>$._default</string>
 		</dict>
 
 <!-- $.c -->
@@ -767,6 +1041,18 @@
 			<string>$.expires[session]</string>
 		</dict>
 
+<!-- $.f -->
+		<dict>	
+			<key>ID</key>
+			<string>$.file</string>
+			<key>String</key>
+			<string>$.file</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
 <!-- $.h -->
 		<dict>	
 			<key>ID</key>
@@ -800,8 +1086,28 @@
 			<key>MoveCursor</key>
 			<integer>1</integer>
 		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>$.lineno</string>
+			<key>String</key>
+			<string>$.lineno</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
 
 <!-- $.m -->
+		<dict>	
+			<key>ID</key>
+			<string>$.main</string>
+			<key>String</key>
+			<string>$.main</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
 		<dict>	
 			<key>ID</key>
 			<string>$.mode</string>
@@ -813,7 +1119,7 @@
 			<integer>1</integer>
 		</dict>
 
-<!-- $.m -->
+<!-- $.n -->
 		<dict>	
 			<key>ID</key>
 			<string>$.name</string>
@@ -936,6 +1242,8 @@
 		</dict>
 
 
+
+
 <!--  $console -->
 		<dict>	
 			<key>ID</key>
@@ -990,8 +1298,6 @@
 			<string>$env</string>
 			<key>PostString</key>
 			<string>:</string>
-			<key>MoveCursor</key>
-			<integer>1</integer>
 			<key>SelectionRange</key>
 			<string>{5, 0}</string>
 			<key>Children</key>
@@ -1009,6 +1315,53 @@
 					<string>REMOTE_ADDR</string>
 				</dict>
 			</array>
+		</dict>
+
+<!-- $exception -->
+		<dict>	
+			<key>ID</key>
+			<string>$exception</string>
+			<key>String</key>
+			<string>$exception</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{10, 0}</string>
+			
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>String</key>
+					<string>.colno</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>.comment</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>.file</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>.handled(true)</string>
+					<key>SelectionRange</key>
+					<string>{8, 4}</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>.lineno</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>.type</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>.source</string>
+				</dict>
+			</array> 
+			
 		</dict>
 
 <!-- $form -->
@@ -1183,6 +1536,8 @@
 		</dict>
 
 
+
+
 <!-- d -->
 	<!-- 	<dict>
 			<key>ID</key>
@@ -1249,6 +1604,8 @@
 		</dict>
 
 
+
+
 <!-- _d -->
 		<dict>
 			<key>ID</key>
@@ -1302,6 +1659,8 @@
 		</dict>
 
 
+
+
 <!-- .a -->
 
 		<dict>	
@@ -1353,6 +1712,12 @@
 		</dict>
 		<dict>	
 			<key>ID</key>
+			<string>.colno</string>
+			<key>String</key>
+			<string>.colno</string>
+		</dict>
+		<dict>	
+			<key>ID</key>
 			<string>.columns</string>
 			<key>String</key>
 			<string>.columns</string>
@@ -1360,6 +1725,12 @@
 			<string>[]</string>
 			<key>MoveCursor</key>
 			<integer>2</integer>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>.comment</string>
+			<key>String</key>
+			<string>.comment</string>
 		</dict>
 		<dict>	
 			<key>ID</key>
@@ -1451,6 +1822,12 @@
 		</dict>
 		<dict>	
 			<key>ID</key>
+			<string>.file</string>
+			<key>String</key>
+			<string>.file</string>
+		</dict>
+		<dict>	
+			<key>ID</key>
 			<string>.flip</string>
 			<key>String</key>
 			<string>.flip</string>
@@ -1489,6 +1866,29 @@
 		</dict>
 
 <!-- .h -->
+		<dict>
+			<key>ID</key>
+			<string>.handled</string>
+			<key>String</key>
+			<string>.handled(true)</string>
+			<key>SelectionRange</key>
+			<string>{9, 4}</string>
+			<key>PostString</key>
+			<string></string>
+			<!-- 
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>String</key>
+					<string>true</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>false</string>
+				</dict>
+			</array> 
+			-->
+		</dict>
 		<dict>	
 			<key>ID</key>
 			<string>.hash</string>
@@ -1582,6 +1982,12 @@
 			<string>[]</string>
 			<key>MoveCursor</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.lineno</string>
+			<key>String</key>
+			<string>.lineno</string>
 		</dict>
 		<dict>	
 			<key>ID</key>
@@ -1748,6 +2154,12 @@
 		</dict>
 		<dict>	
 			<key>ID</key>
+			<string>.source</string>
+			<key>String</key>
+			<string>.source</string>
+		</dict>
+		<dict>	
+			<key>ID</key>
 			<string>.sql-string</string>
 			<key>String</key>
 			<string>.sql-string</string>
@@ -1782,7 +2194,13 @@
 			<integer>1</integer>
 		</dict>
 
-<!-- .TZ -->
+<!-- .t -->
+		<dict>	
+			<key>ID</key>
+			<string>.type</string>
+			<key>String</key>
+			<string>.type</string>
+		</dict>
 		<dict>	
 			<key>ID</key>
 			<string>.TZ</string>
@@ -1943,6 +2361,17 @@
 <!-- @u -->
 		<dict>	
 			<key>ID</key>
+			<string>@unhandled_exception</string>
+			<key>String</key>
+			<string>@unhandled_exception</string>
+			<key>MoveCursor</key>
+			<integer>18</integer>
+			<key>PostString</key>
+			<string>[exception;stack]</string>
+		</dict>
+
+		<dict>	
+			<key>ID</key>
 			<string>@USE</string>
 			<key>String</key>
 			<string>@USE</string>
@@ -1958,6 +2387,9 @@
 
 	<key>Contexts</key>
 	<array>
+
+
+
 
 <!--  @top -->
 <!-- ^top ^top:attributes ^top[attributes] ^top{attributes} + -->

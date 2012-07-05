@@ -1,10 +1,8 @@
 #Coda 2 Parser Mode
 
-
 ##Requirements
 
-*Coda 2 (http://panic.com/coda/)
-*Parser 3.4.2 (http://www.parser.ru/en/, http://parser.ru)
+Coda 2 (http://panic.com/coda/), Parser 3.4.2 (http://www.parser.ru/en/, http://parser.ru)
 
 ##Installation
 
