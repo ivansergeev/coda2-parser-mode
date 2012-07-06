@@ -500,6 +500,43 @@
 			</array>
 		</dict>
 
+<!-- ^inet -->
+		<dict>	
+			<key>ID</key>
+			<string>^inet</string>
+			<key>String</key>
+			<string>^inet</string>
+			<key>SelectionRange</key>
+			<string>{5, 0}</string>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>String</key>
+					<string>:aton[]</string>
+					<key>PostString</key>
+					<string></string>
+					<key>SelectionRange</key>
+					<string>{6, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>address</string>
+					</array>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>:ntoa()</string>
+					<key>PostString</key>
+					<string></string>
+					<key>SelectionRange</key>
+					<string>{6, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>number</string>
+					</array>
+				</dict>
+			</array>
+		</dict>
+
 <!-- ^int -->
 		<dict>	
 			<key>ID</key>
@@ -532,6 +569,31 @@
 					<key>Parameters</key>
 					<array>
 						<string>query</string>
+					</array>
+				</dict>
+			</array>
+		</dict>
+
+<!-- ^mail -->
+		<dict>	
+			<key>ID</key>
+			<string>^mail</string>
+			<key>String</key>
+			<string>^mail</string>
+			<key>PostString</key>
+			<string></string>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>String</key>
+					<string>:send[]</string>
+					<key>PostString</key>
+					<string></string>
+					<key>SelectionRange</key>
+					<string>{6, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>message</string>
 					</array>
 				</dict>
 			</array>
@@ -1052,8 +1114,28 @@
 			<key>MoveCursor</key>
 			<integer>1</integer>
 		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>$.from</string>
+			<key>String</key>
+			<string>$.from</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
 
 <!-- $.h -->
+		<dict>	
+			<key>ID</key>
+			<string>$.html</string>
+			<key>String</key>
+			<string>$.html</string>
+			<key>PostString</key>
+			<string>{}</string>
+			<key>SelectionRange</key>
+			<string>{7, 0}</string>
+		</dict>
 		<dict>	
 			<key>ID</key>
 			<string>$.httponly</string>
@@ -1150,6 +1232,16 @@
 			<key>SelectionRange</key>
 			<string>{9, 3}</string>
 		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>$.options</string>
+			<key>String</key>
+			<string>$.options</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
 
 <!-- $.p -->
 		<dict>	
@@ -1161,6 +1253,16 @@
 			<string>[]</string>
 			<key>MoveCursor</key>
 			<integer>1</integer>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>$.print-debug</string>
+			<key>String</key>
+			<string>$.print-debug</string>
+			<key>PostString</key>
+			<string>(true)</string>
+			<key>SelectionRange</key>
+			<string>{14, 4}</string>
 		</dict>
 
 <!-- $.r -->
@@ -1196,8 +1298,28 @@
 			<key>MoveCursor</key>
 			<integer>1</integer>
 		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>$.subject</string>
+			<key>String</key>
+			<string>$.subject</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
 
 <!-- $.t -->
+		<dict>	
+			<key>ID</key>
+			<string>$.text</string>
+			<key>String</key>
+			<string>$.text</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>ID</key>
 			<string>$.timeout</string>
@@ -1205,6 +1327,16 @@
 			<string>$.timeout</string>
 			<key>PostString</key>
 			<string>()</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>$.to</string>
+			<key>String</key>
+			<string>$.to</string>
+			<key>PostString</key>
+			<string>[]</string>
 			<key>MoveCursor</key>
 			<integer>1</integer>
 		</dict>
@@ -1241,7 +1373,17 @@
 			<integer>1</integer>
 		</dict>
 
-
+<!-- $.v -->
+		<dict>
+			<key>ID</key>
+			<string>$.value</string>
+			<key>String</key>
+			<string>$.value</string>
+			<key>PostString</key>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
 
 
 <!--  $console -->
