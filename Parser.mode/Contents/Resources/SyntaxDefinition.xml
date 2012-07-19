@@ -43,7 +43,7 @@
 
             <keywords id="P3 Base Classes" useforautocomplete="yes" scope="support.class.standard.p3">
                
-                <regex>^(\@(CLASS|USE|OPTIONS|BASE|auto\[\w*\]))</regex>
+                <regex>^(\@(CLASS|USE|OPTIONS|BASE|auto\[\w*\]))[\n\r]</regex>
 
                <!--  <string>@CLASS</string>
                 <string>@USE</string>
@@ -92,13 +92,17 @@
                 
             </keywords>
 
-<!--             <keywords id="P3 Attributes" casesensitive="yes" useforautocomplete="yes" scope="language.variable.strings.p3">
+            <!--
+             <keywords id="P3 Attributes" casesensitive="yes" useforautocomplete="yes" scope="language.variable.strings.p3"<name />
                 <regex>\$\w+{1,512}\.(_\w+{1,512})</regex>
-            </keywords> -->
+            </keywords>
+            -->
 
             <keywords id="P3 User Method" useforautocomplete="yes" scope="language.function.p3">
 				<!-- @methodName -->
                 <regex>^\@(?!CLASS|USE|auto\[)(?'name'[\w]{1,512})</regex>
+                <!-- <beginregex>^\@(?!CLASS|USE|OPTIONS|BASE|auto\[)(?'name'\w{1,512})</beginregex> -->
+                <!-- <endregex>[\n\r]</endregex> -->
             </keywords>
 
             <!--
@@ -114,7 +118,7 @@
                 <end><regex>[\n\r]</regex></end>
                 <import mode="Base" state="EmailAndURLContainerState" keywords-only="yes"/>
             </state>
-            
+
             <!-- code ^rem{ comment }  -->
             <state id="P3 Block Comment" type="comment" scope="comment.line.double-slash.p3">
                 <begin><regex>[^(\^rem\{)]\^rem\{</regex><autoend>[^(\^rem\{)]\^rem\{</autoend></begin>

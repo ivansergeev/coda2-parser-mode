@@ -19,16 +19,15 @@
         <!-- ${variable} ${variable.variable} -->
         <regex>(\$\{[\w\.]{1,512}\}?)</regex>
     </symbol> 
-    
-    <symbol id="P3 Call Variables" indentation="0" useforautocomplete="yes" hidden="yes">
-        
-    </symbol> 
-    
+
+    <!-- 
+        <symbol id="P3 Call Variables" indentation="0" useforautocomplete="yes" hidden="yes"></symbol>  
+    -->
 
     <symbol id="P3 Base Classes" image="SymbolC" indentation="0" ignoreblocks="no" useforautocomplete="no">
 
        <!-- find: @CLASS, @USE, @OPTIONS, @BASE, @auto -->
-       <regex>^(\@(CLASS|USE|OPTIONS|BASE|auto\[\w*\]))</regex>
+       <regex>^(\@(CLASS|USE|OPTIONS|BASE|auto\[\w*\]))[\n\r]</regex>
         <postprocess>
             <find>[\n\r]</find>
             <replace></replace>
@@ -53,9 +52,12 @@
        
        <!-- find: @method[], exclude: @CLASS, @USE, @OPTIONS, @BASE, @auto[ -->
        <regex>^\@(?!CLASS|USE|OPTIONS|BASE|auto\[)(?'name'\w{1,512})</regex>
+        <!-- <beginregex>^\@(?!CLASS|USE|OPTIONS|BASE|auto\[)(?'name'\w{1,512})</beginregex> -->
+        <!-- <endregex>[\n\r]</endregex> -->
+
         <postprocess>
-            <find>[\n\r]</find>
-            <replace> </replace>
+            <!-- <find>[\n\r]</find> -->
+            <!-- <replace> </replace> -->
             <find>[ \t]+</find>
             <replace></replace>
 
@@ -71,7 +73,6 @@
         <!-- with arguments -->
         <!-- <arguments>([\^A-Za-z0-9_]+)[;]*</arguments> -->
         <!-- <variables>(?'name'[\w\d]{1,512})</variables> -->
-
 
     </symbol>
 

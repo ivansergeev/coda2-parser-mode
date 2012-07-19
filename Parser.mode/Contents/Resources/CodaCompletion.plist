@@ -842,6 +842,59 @@
 			</array>
 		</dict>
 
+<!-- ^image -->
+		<dict>	
+			<key>ID</key>
+			<string>^image</string>
+			<key>String</key>
+			<string>^image</string>
+			<key>SelectionRange</key>
+			<string>{6, 0}</string>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>String</key>
+					<string>::create(;)</string>
+					<key>PostString</key>
+					<string></string>
+					<key>SelectionRange</key>
+					<string>{9, 0}</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>::create(;;0x000000)</string>
+					<key>PostString</key>
+					<string></string>
+					<key>SelectionRange</key>
+					<string>{9, 0}</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>::load[]</string>
+					<key>PostString</key>
+					<string></string>
+					<key>SelectionRange</key>
+					<string>{7, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>file</string>
+					</array>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>::measure[]</string>
+					<key>PostString</key>
+					<string></string>
+					<key>SelectionRange</key>
+					<string>{10, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>file</string>
+					</array>
+				</dict>
+			</array>
+		</dict>
+
 <!-- ^mail -->
 		<dict>	
 			<key>ID</key>
@@ -2134,9 +2187,36 @@
 			<key>MoveCursor</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.arc()</string>
+			<key>String</key>
+			<string>.arc()</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{5, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>center x;center y;width;height;start in degrees;end in degrees;color</string>
+			</array>
+		</dict>
 
 <!-- .b -->
-		
+		<dict>
+			<key>ID</key>
+			<string>.bar()</string>
+			<key>String</key>
+			<string>.bar()</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{5, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>x0;y0;x1;y1;color</string>
+			</array>
+		</dict>
 		<dict>	
 			<key>ID</key>
 			<string>.base64[]</string>
@@ -2160,6 +2240,20 @@
 			<string>.cdate</string>
 			<key>String</key>
 			<string>.cdate</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.circle()</string>
+			<key>String</key>
+			<string>.circle()</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{8, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>center x;center y;radius;line color</string>
+			</array>
 		</dict>
 		<dict>
 			<key>ID</key>
@@ -2214,6 +2308,20 @@
 			<string>.content-type</string>
 			<key>String</key>
 			<string>.content-type</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.copy[]()</string>
+			<key>String</key>
+			<string>.copy[]()</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{6, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>image source</string>
+			</array>
 		</dict>
 		<dict>	
 			<key>ID</key>
@@ -2286,6 +2394,14 @@
 			<string>{8, 0}</string>
 		</dict>
 
+<!-- .e -->
+		<dict>
+			<key>ID</key>
+			<string>.exif</string>
+			<key>String</key>
+			<string>.exif</string>
+		</dict>
+
 <!-- .f -->
 		<dict>	
 			<key>ID</key>
@@ -2299,11 +2415,39 @@
 			<key>String</key>
 			<string>.file</string>
 		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.fill()</string>
+			<key>String</key>
+			<string>.fill()</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{6, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>x;y;color</string>
+			</array>
+		</dict>
 		<dict>	
 			<key>ID</key>
 			<string>.flip[]</string>
 			<key>String</key>
 			<string>.flip[]</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.font[]()</string>
+			<key>String</key>
+			<string>.font[]()</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{6, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>symbols;file</string>
+			</array>
 		</dict>
 		<dict>	
 			<key>ID</key>
@@ -2328,6 +2472,12 @@
 
 <!-- .g -->
 		<dict>	
+			<key>ID</key>
+			<string>.gif[]</string>
+			<key>String</key>
+			<string>.gif[]</string>
+		</dict>
+		<dict>
 			<key>ID</key>
 			<string>.gmt-string[]</string>
 			<key>String</key>
@@ -2366,9 +2516,21 @@
 		</dict>
 		<dict>	
 			<key>ID</key>
+			<string>.height</string>
+			<key>String</key>
+			<string>.height</string>
+		</dict>
+		<dict>	
+			<key>ID</key>
 			<string>.hour</string>
 			<key>String</key>
 			<string>.hour</string>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>.html[]</string>
+			<key>String</key>
+			<string>.html[]</string>
 		</dict>
 
 <!-- .i -->
@@ -2440,6 +2602,20 @@
 		</dict>
 		<dict>
 			<key>ID</key>
+			<string>.length[]</string>
+			<key>String</key>
+			<string>.length[]</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{8, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>text</string>
+			</array>
+		</dict>
+		<dict>
+			<key>ID</key>
 			<string>.line[]</string>
 			<key>String</key>
 			<string>.line[]</string>
@@ -2450,9 +2626,43 @@
 		</dict>
 		<dict>
 			<key>ID</key>
+			<string>.line()</string>
+			<key>String</key>
+			<string>.line()</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{6, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>x0;y0;x1;y1;color</string>
+			</array>
+		</dict>
+		<dict>
+			<key>ID</key>
 			<string>.lineno</string>
 			<key>String</key>
 			<string>.lineno</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.line-style[]</string>
+			<key>String</key>
+			<string>.line-style[]</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{12, 0}</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.line-width[]</string>
+			<key>String</key>
+			<string>.line-width[]</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{12, 0}</string>
 		</dict>
 		<dict>	
 			<key>ID</key>
@@ -2553,12 +2763,113 @@
 			<string>{8, 3}</string>
 		</dict>
 
+<!-- .p -->
+
+		<dict>
+			<key>ID</key>
+			<string>.pixel()</string>
+			<key>String</key>
+			<string>.pixel()</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{7, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>x;y</string>
+			</array>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.polybar()[]</string>
+			<key>String</key>
+			<string>.polybar()[]</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{9, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>color</string>
+			</array>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.polygon()[]</string>
+			<key>String</key>
+			<string>.polygon()[]</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{9, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>color</string>
+			</array>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.polyline()[]</string>
+			<key>String</key>
+			<string>.polyline()[]</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{10, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>color</string>
+			</array>
+		</dict>
+
 <!-- .r -->
+		<dict>
+			<key>ID</key>
+			<string>.rectangle()</string>
+			<key>String</key>
+			<string>.rectangle()</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{11, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>x0;y0;x1;y1;line color</string>
+			</array>
+		</dict>
 		<dict>
 			<key>ID</key>
 			<string>.release[]</string>
 			<key>String</key>
 			<string>.release[]</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.replace()</string>
+			<key>String</key>
+			<string>.replace()</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{9, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>old color;new color</string>
+			</array>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.replace()[]</string>
+			<key>String</key>
+			<string>.replace()[]</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{9, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>old color;new color</string>
+			</array>
 		</dict>
 		<dict>
 			<key>ID</key>
@@ -2616,6 +2927,20 @@
 			<string>.second</string>
 			<key>String</key>
 			<string>.second</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.sector()</string>
+			<key>String</key>
+			<string>.sector()</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{8, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>center x;center y;width;height;start in degrees;end in degrees;color</string>
+			</array>
 		</dict>
 		<dict>
 			<key>ID</key>
@@ -2688,6 +3013,12 @@
 		</dict>
 		<dict>	
 			<key>ID</key>
+			<string>.src</string>
+			<key>String</key>
+			<string>.src</string>
+		</dict>	
+		<dict>	
+			<key>ID</key>
 			<string>.status</string>
 			<key>String</key>
 			<string>.status</string>
@@ -2715,6 +3046,20 @@
 			<string>.text</string>
 			<key>String</key>
 			<string>.text</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>.text()[]</string>
+			<key>String</key>
+			<string>.text()[]</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{6, 0}</string>
+			<key>Parameters</key>
+			<array>
+				<string>x;y</string>
+			</array>
 		</dict>
 		<dict>	
 			<key>ID</key>
@@ -2767,6 +3112,12 @@
 			<string>.weekyear</string>
 			<key>String</key>
 			<string>.weekyear</string>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>.width</string>
+			<key>String</key>
+			<string>.width</string>
 		</dict>
 
 <!-- .y -->
