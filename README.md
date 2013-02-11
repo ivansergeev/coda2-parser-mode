@@ -4,9 +4,9 @@
 
 Coda 2 (http://panic.com/coda/), Parser 3.4.2 (http://www.parser.ru/en/, http://parser.ru)
 
-File ext: *.p, *.html (can assign custom)
-Text encoding: Unicode (UTF-8)
-Line endings: Unix (LF)
+	File ext: *.p, *.html (can custom assign)
+	Text encoding: Unicode (UTF-8)
+	Line endings: Unix (LF)
 
 ##Installation
 

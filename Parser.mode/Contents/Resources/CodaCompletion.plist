@@ -3,11 +3,12 @@
 <plist version="1.0">
 <dict>
 	
-	<key>Comments</key>	
+	<key>Comments</key>
 	<dict>
 		<key>StartTag</key><string>^rem{</string>
 		<key>EndTag</key><string>}</string>
 	</dict>
+
 
 	<key>SymbolTableContext</key>
 	<dict>
@@ -895,6 +896,43 @@
 			</array>
 		</dict>
 
+<!-- ^json -->
+		<dict>	
+			<key>ID</key>
+			<string>^json</string>
+			<key>String</key>
+			<string>^json</string>
+			<key>SelectionRange</key>
+			<string>{5, 0}</string>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>String</key>
+					<string>:parse[;]</string>
+					<key>PostString</key>
+					<string></string>
+					<key>SelectionRange</key>
+					<string>{7, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>json string</string>
+					</array>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>:string[;]</string>
+					<key>PostString</key>
+					<string></string>
+					<key>SelectionRange</key>
+					<string>{8, 0}</string>
+					<key>Parameters</key>
+					<array>
+						<string>json object</string>
+					</array>
+				</dict>
+			</array>
+		</dict>
+
 <!-- ^mail -->
 		<dict>	
 			<key>ID</key>
@@ -1369,6 +1407,16 @@
 		</dict>
 		<dict>	
 			<key>ID</key>
+			<string>$.depth()</string>
+			<key>String</key>
+			<string>$.depth()</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{8, 0}</string>
+		</dict>
+		<dict>	
+			<key>ID</key>
 			<string>$.distinct()</string>
 			<key>String</key>
 			<string>$.distinct()</string>
@@ -1392,6 +1440,27 @@
 			<string></string>
 			<key>SelectionRange</key>
 			<string>{9, 0}</string>
+		</dict>
+		<dict>	
+			<key>ID</key>
+			<string>$.double()</string>
+			<key>String</key>
+			<string>$.double()</string>
+			<key>PostString</key>
+			<string></string>
+			<key>SelectionRange</key>
+			<string>{9, 0}</string>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>String</key>
+					<string>true</string>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>false</string>
+				</dict>
+			</array>
 		</dict>
 
 <!-- $.e -->
@@ -1705,6 +1774,8 @@
 			<key>SelectionRange</key>
 			<string>{8, 0}</string>
 		</dict>
+
+
 
 
 <!--  $console -->
@@ -3353,7 +3424,11 @@
 
 		<dict>
 			<key>Regex</key>
-			<string>\^if\((?\$\w*)\s?(?&lt;top&gt;\-?(\w\s)+)\s*\)\z</string>
+			
+			<!-- <string>\^if\((?\$\w*)\s?(?&lt;top&gt;\-?(\w\s)+)\s*\)\z</string> -->
+
+			<string>\^if\(?(?&lt;top&gt;\-?(\w\s)+)\s*\)?\z</string>
+
 			<key>ShouldAppendCompletion</key>
 			<false/>
 			<key>ShouldCompleteAll</key>

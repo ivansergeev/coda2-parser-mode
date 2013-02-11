@@ -88,8 +88,9 @@
     <!-- Коментарий сроки -->
     <!-- find: # comment -->
     <symbol id="Pragma Marks" font-weight="normal" font-style="normal" image="SymbolMark" indentation="0" ignoreblocks="no" show-in-comments="yes">
-        <beginregex>^#</beginregex>
-        <endregex>[\n\r]</endregex>
+        <!-- <beginregex>^#</beginregex> -->
+        <!-- <endregex>[\n\r]</endregex> -->
+        <regex>^#[\s\t]*!([^\n\r]+)</regex>
     </symbol>
 
     <!-- Коментарий в конце кода -->
