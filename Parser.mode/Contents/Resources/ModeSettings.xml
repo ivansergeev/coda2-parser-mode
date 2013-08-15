@@ -2,6 +2,8 @@
 <settings>
     <recognition>
         <extension>p</extension>
-        <extension>html</extension>
+	    <extension>pt</extension>
+        <extension>h</extension>
+		<extension>html</extension>
     </recognition>
 </settings>

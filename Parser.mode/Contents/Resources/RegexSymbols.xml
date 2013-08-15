@@ -18,7 +18,7 @@
         <regex>(\$[\w\.]{1,512})</regex>
         <!-- ${variable} ${variable.variable} -->
         <regex>(\$\{[\w\.]{1,512}\}?)</regex>
-    </symbol> 
+    </symbol>
 
     <!-- 
         <symbol id="P3 Call Variables" indentation="0" useforautocomplete="yes" hidden="yes"></symbol>  
@@ -46,14 +46,12 @@
     -->
 
     <symbol id="P3 User Method" image="SymbolM" indentation="0" ignoreblocks="no" useforautocomplete="yes">
-        
+
         <!-- с аргументами не работает подстановка ^ -->
        <!-- <regex>^\@(?!CLASS|USE|auto\[)(?'name'\w{1,512}\[(?'arguments'[^\]]{0,512})\])</regex> -->
-       
+
        <!-- find: @method[], exclude: @CLASS, @USE, @OPTIONS, @BASE, @auto[ -->
        <regex>^\@(?!CLASS|USE|OPTIONS|BASE|auto\[)(?'name'\w{1,512})</regex>
-        <!-- <beginregex>^\@(?!CLASS|USE|OPTIONS|BASE|auto\[)(?'name'\w{1,512})</beginregex> -->
-        <!-- <endregex>[\n\r]</endregex> -->
 
         <postprocess>
             <!-- <find>[\n\r]</find> -->
@@ -87,21 +85,19 @@
 
     <!-- Коментарий сроки -->
     <!-- find: # comment -->
-    <symbol id="Pragma Marks" font-weight="normal" font-style="normal" image="SymbolMark" indentation="0" ignoreblocks="no" show-in-comments="yes">
-        <!-- <beginregex>^#</beginregex> -->
-        <!-- <endregex>[\n\r]</endregex> -->
-        <regex>^#[\s\t]*!([^\n\r]+)</regex>
+    <symbol id="Pragma Marks Single" font-weight="normal" font-style="normal" image="SymbolMark" indentation="0" ignoreblocks="yes" show-in-comments="yes">
+		 <regex>^#\s*!([^\n\r]+)</regex>
     </symbol>
 
     <!-- Коментарий в конце кода -->
     <!-- find: code ^rem{ comment } -->
-    <symbol id="Pragma marks" font-weight="normal" font-style="normal" image="SymbolMark" indentation="0" ignoreblocks="no" show-in-comments="yes">
+    <symbol id="Pragma Marks Inside Block" font-weight="normal" font-style="normal" image="SymbolMark" indentation="0" ignoreblocks="no" show-in-comments="yes">
         <regex>[^(\^rem\{)]\^rem\{!(.*)\}</regex>
     </symbol>
 
      <!-- Коментарий блока -->
      <!-- find: ^rem{ ... } -->
-    <symbol id="Pragma marks" font-weight="normal" font-style="normal" image="SymbolMark" indentation="0" ignoreblocks="no" show-in-comments="yes">
+    <symbol id="Pragma Marks Block" font-weight="normal" font-style="normal" image="SymbolMark" indentation="0" ignoreblocks="no" show-in-comments="yes">
         <beginregex>^\^rem\{</beginregex>
         <endregex>^}</endregex>
     </symbol>
