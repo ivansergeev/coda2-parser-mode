@@ -21,4 +21,4 @@ Licensed under the MIT License
 
 ##Author
 
-Copyright (c) 2012 Ivan Sergeev ivansergeev@gmail.com
+Copyright (c) Ivan Sergeev ivansergeev@gmail.com
