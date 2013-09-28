@@ -2,7 +2,8 @@
 
 ##Requirements
 
-Coda 2 (http://panic.com/coda/), Parser 3.4.2 (http://www.parser.ru/en/, http://parser.ru)
+Coda 2 (http://panic.com/coda/)
+Parser 3.4.2 (http://www.parser.ru/en/, http://parser.ru)
 
 	File ext: *.p, *.html (can custom assign)
 	Text encoding: Unicode (UTF-8)
@@ -15,10 +16,16 @@ Coda 2 (http://panic.com/coda/), Parser 3.4.2 (http://www.parser.ru/en/, http://
 3. Open Coda 2
 4. Switch 'Syntax mode' to 'Parser'
 
+##Features
+
+Include custom variables:
+$CONNECT_STRING
+$TIME
+
 ##License
 
 Licensed under the MIT License
 
 ##Author
 
-Copyright (c) Ivan Sergeev ivansergeev@gmail.com
+Copyright (c) Ivan Sergeev (ivansergeev@gmail.com)

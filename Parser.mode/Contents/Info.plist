@@ -7,14 +7,16 @@
 	<key>CFBundleName</key>
 	<string>Parser</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>© Ivan Sergeev
-http://www.ivansergeev.com</string>
+	<string>
+		© Ivan Sergeev (ivansergeev@gmail.com)
+		https://github.com/ivansergeev/coda2-parser-mode
+	</string>
 	<key>CFBundleShortVersionString</key>
 	<string>4.0</string>
 	<key>CFBundleVersion</key>
 	<string>4.0</string>
 	<key>CFBundleGetInfoString</key>
-	<string>4.0, Copyright Ivan Sergeev</string>
+	<string>4.0, Copyright Ivan Sergeev (ivansergeev@gmail.com)</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleInfoDictionaryVersion</key>
