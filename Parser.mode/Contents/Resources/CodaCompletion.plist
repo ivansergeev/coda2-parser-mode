@@ -99,12 +99,105 @@
 			<key>String</key>
 			<string>^apply-taint</string>
 			<key>MoveCursor</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>PostString</key>
-			<string></string>
+			<string>[][]</string>
 			<key>Parameters</key>
 			<array>
-				<string>[text], [conversion][text]</string>
+				<string>conversion</string>
+			</array>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>String</key>
+					<string>as-is</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>file-spec</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>js</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>json</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>html</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>http-header</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>mail-header</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>optimized-as-is</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>optimized-html</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>optimized-xml</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>parser-code</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>regex</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>sql</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>uri</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>xml</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
 			</array>
 		</dict>
 
@@ -614,8 +707,7 @@
 		</dict>
 <!-- end update -->
 		
-<!-- #################################################################################### -->
-		
+<!-- start update -->
 <!-- ^for -->
 		<dict>
 			<key>ID</key>
@@ -626,6 +718,11 @@
 			<string>[i](;){}</string>
 			<key>MoveCursor</key>
 			<integer>4</integer>
+			<key>Parameters</key>
+			<array>
+				<string>start</string>
+				<string>finish</string>
+			</array>
 		</dict>
 
 <!-- ^hash -->
@@ -1530,14 +1627,17 @@
 <!-- ^sleep -->
 		<dict>
 			<key>ID</key>
-			<string>^sleep()</string>
+			<string>^sleep</string>
 			<key>String</key>
-			<string>^sleep()</string>
-			<key>SelectionRange</key>
-			<string>{7, 0}</string>
+			<string>^sleep</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
 		</dict>
+<!-- end update -->
 
-<!-- start ok -->
+<!-- #################################################################################### -->
 
 <!-- ^table -->
 		<dict>
@@ -1547,8 +1647,8 @@
 			<string>^table</string>
 			<key>PostString</key>
 			<string>::</string>
-			<key>SelectionRange</key>
-			<string>{8, 0}</string>
+			<key>MoveCursor</key>
+			<integer>2</integer>
 			<key>Children</key>
 			<array>
 				<dict>
@@ -1556,23 +1656,11 @@
 					<string>create</string>
 					<key>PostString</key>
 					<string></string>
-					<key>SelectionRange</key>
-					<string>{6, 0}</string>
+					<key>MoveCursor</key>
+					<integer>0</integer>
 					<key>Parameters</key>
 					<array>
-						<string>{[data}]</string>
-					</array>
-				</dict>
-				<dict>
-					<key>String</key>
-					<string>create[nameless]{}</string>
-					<key>PostString</key>
-					<string></string>
-					<key>SelectionRange</key>
-					<string>{17, 0}</string>
-					<key>Parameters</key>
-					<array>
-						<string>data</string>
+						<string>[table], [table;options], {data}, [nameless]{data}, {data}[options]</string>
 					</array>
 				</dict>
 				<dict>
@@ -1580,44 +1668,20 @@
 					<string>load</string>
 					<key>PostString</key>
 					<string>[]</string>
-					<key>SelectionRange</key>
-					<string>{5, 0}</string>
+					<key>MoveCursor</key>
+					<integer>1</integer>
 					<key>Parameters</key>
 					<array>
-						<string>file</string>
+						<string>file, file;options, nameless;file, nameless;file;options</string>
 					</array>
 				</dict>
 				<dict>
 					<key>String</key>
-					<string>load[nameless;]</string>
+					<string>sql</string>
 					<key>PostString</key>
-					<string></string>
-					<key>SelectionRange</key>
-					<string>{14, 0}</string>
-					<key>Parameters</key>
-					<array>
-						<string>file</string>
-					</array>
-				</dict>
-				<dict>
-					<key>String</key>
-					<string>sql{}</string>
-					<key>PostString</key>
-					<string></string>
-					<key>SelectionRange</key>
-					<string>{4, 0}</string>
-					<key>Parameters</key>
-					<array>
-						<string>query</string>
-					</array>
-				</dict>
-				<dict>
-					<key>String</key>
-					<string>sql{}[	$.limit(1)	]</string>
-					<key>PostString</key>
-					<string></string>
-					<key>SelectionRange</key>
-					<string>{4, 0}</string>
+					<string>{}[	$.limit(1)	]</string>
+					<key>MoveCursor</key>
+					<integer>1</integer>
 					<key>Parameters</key>
 					<array>
 						<string>query</string>
@@ -1625,7 +1689,7 @@
 				</dict>
 			</array>
 		</dict>
-<!-- end ok -->
+
 		
 <!-- ^throw -->
 		<dict>
@@ -1633,10 +1697,10 @@
 			<string>^throw</string>
 			<key>String</key>
 			<string>^throw</string>
-			<key>SelectionRange</key>
-			<string>{7, 0}</string>
 			<key>PostString</key>
 			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
 			<key>Parameters</key>
 			<array>
 				<string>type;source;comment</string>
@@ -1649,148 +1713,240 @@
 			<string>^try</string>
 			<key>String</key>
 			<string>^try</string>
-			<key>SelectionRange</key>
-			<string>{5, 0}</string>
 			<key>PostString</key>
-			<string>{}{}</string>
+			<string>{}{	$exception.handled(true)	}</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
 		</dict>
 
-<!-- ^untaint -->
+<!-- ^taint -->
 		<dict>
 			<key>ID</key>
-			<string>^taint[]</string>
+			<string>^taint</string>
 			<key>String</key>
-			<string>^taint[]</string>
-			<key>SelectionRange</key>
-			<string>{7, 0}</string>
+			<string>^taint</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
 			<key>PostString</key>
-			<string></string>
-			<key>Parameters</key>
-			<array>
-				<string>text</string>
-			</array>
-		</dict>
-		<dict>
-			<key>ID</key>
-			<string>^taint[][]</string>
-			<key>String</key>
-			<string>^taint[][]</string>
-			<key>SelectionRange</key>
-			<string>{7, 0}</string>
-			<key>PostString</key>
-			<string></string>
+			<string>[][]</string>
 			<key>Parameters</key>
 			<array>
 				<string>conversion</string>
 			</array>
-		</dict>
-
-<!-- ^untaint -->
-		<dict>
-			<key>ID</key>
-			<string>^untaint{}</string>
-			<key>String</key>
-			<string>^untaint{}</string>
-			<key>SelectionRange</key>
-			<string>{9, 0}</string>
-			<key>PostString</key>
-			<string></string>
-			<key>Parameters</key>
-			<array>
-				<string>code</string>
-			</array>
-		</dict>
-		<dict>
-			<key>ID</key>
-			<string>^untaint[]</string>
-			<key>String</key>
-			<string>^untaint[]</string>
-			<key>PostString</key>
-			<string>{}</string>
-			<key>SelectionRange</key>
-			<string>{9, 0}</string>
-			<key>Parameters</key>
-			<array>
-				<string>conversion</string>
-			</array>
-			<!-- todo -->
-			<!-- 
 			<key>Children</key>
 			<array>
 				<dict>
 					<key>String</key>
 					<string>as-is</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
 				</dict>
 				<dict>
 					<key>String</key>
 					<string>file-spec</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
 				</dict>
 				<dict>
 					<key>String</key>
 					<string>js</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
 				</dict>
 				<dict>
 					<key>String</key>
 					<string>json</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
 				</dict>
 				<dict>
 					<key>String</key>
 					<string>html</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
 				</dict>
 				<dict>
 					<key>String</key>
 					<string>http-header</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
 				</dict>
 				<dict>
 					<key>String</key>
 					<string>mail-header</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
 				</dict>
 				<dict>
 					<key>String</key>
 					<string>optimized-as-is</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
 				</dict>
 				<dict>
 					<key>String</key>
 					<string>optimized-html</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
 				</dict>
 				<dict>
 					<key>String</key>
 					<string>optimized-xml</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
 				</dict>
 				<dict>
 					<key>String</key>
 					<string>parser-code</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
 				</dict>
 				<dict>
 					<key>String</key>
 					<string>regex</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
 				</dict>
 				<dict>
 					<key>String</key>
 					<string>sql</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
 				</dict>
 				<dict>
 					<key>String</key>
 					<string>uri</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
 				</dict>
 				<dict>
 					<key>String</key>
 					<string>xml</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
 				</dict>
-			</array> 
-			-->
+			</array>
+		</dict>
+
+<!-- ^untaint -->
+		<dict>
+			<key>ID</key>
+			<string>^untaint</string>
+			<key>String</key>
+			<string>^untaint</string>
+			<key>PostString</key>
+			<string>[]{}</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+			<key>Parameters</key>
+			<array>
+				<string>conversion</string>
+			</array>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>String</key>
+					<string>as-is</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>file-spec</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>js</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>json</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>html</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>http-header</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>mail-header</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>optimized-as-is</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>optimized-html</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>optimized-xml</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>parser-code</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>regex</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>sql</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>uri</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>String</key>
+					<string>xml</string>
+					<key>MoveCursor</key>
+					<integer>2</integer>
+				</dict>
+			</array>
 		</dict>
 
 <!-- ^use -->
 		<dict>
 			<key>ID</key>
-			<string>^use[]</string>
+			<string>^use</string>
 			<key>String</key>
-			<string>^use[]</string>
-			<key>SelectionRange</key>
-			<string>{5, 0}</string>
+			<string>^use</string>
 			<key>PostString</key>
-			<string></string>
+			<string>[]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
 			<key>Parameters</key>
 			<array>
 				<string>file</string>
@@ -1803,15 +1959,19 @@
 			<string>^void</string>
 			<key>String</key>
 			<string>^void</string>
+			<key>PostString</key>
+			<string>:</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
 			<key>Children</key>
 			<array>
 				<dict>
 					<key>String</key>
-					<string>:sql{}</string>
+					<string>sql</string>
 					<key>PostString</key>
-					<string></string>
-					<key>SelectionRange</key>
-					<string>{5, 0}</string>
+					<string>{}</string>
+					<key>MoveCursor</key>
+					<integer>1</integer>
 					<key>Parameters</key>
 					<array>
 						<string>query</string>
@@ -1826,11 +1986,12 @@
 			<string>^while</string>
 			<key>String</key>
 			<string>^while</string>
-			<key>SelectionRange</key>
-			<string>{7, 0}</string>
 			<key>PostString</key>
 			<string>(){}</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
 		</dict>
+
 
 <!-- ??? ^xdoc -->
 

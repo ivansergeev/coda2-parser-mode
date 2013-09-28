@@ -69,7 +69,7 @@
         <poststring>[]</poststring>
 
         <!-- with arguments -->
-        <!-- <arguments>([\^A-Za-z0-9_]+)[;]*</arguments> -->
+        <arguments>([\^\$\:\.\w\d\-]+)[;]*</arguments>
         <!-- <variables>(?'name'[\w\d]{1,512})</variables> -->
 
     </symbol>

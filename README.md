@@ -2,8 +2,7 @@
 
 ##Requirements
 
-Coda 2 (http://panic.com/coda/)
-Parser 3.4.2 (http://www.parser.ru/en/, http://parser.ru)
+Coda 2 (http://panic.com/coda/), Parser 3.4.2 (http://www.parser.ru/en/, http://parser.ru)
 
 	File ext: *.p, *.html (can custom assign)
 	Text encoding: Unicode (UTF-8)
@@ -18,9 +17,7 @@ Parser 3.4.2 (http://www.parser.ru/en/, http://parser.ru)
 
 ##Features
 
-Include custom variables:
-$CONNECT_STRING
-$TIME
+Include custom variables: $CONNECT_STRING, $TIME
 
 ##License
 
