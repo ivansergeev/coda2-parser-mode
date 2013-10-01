@@ -65,8 +65,6 @@
 	<key>Completions</key>
 	<array>
 
-
-
 <!-- ^# -->
 <!-- 
 		<dict>
@@ -89,8 +87,6 @@
 			</array>
 		</dict> 
 -->
-
-<!-- start update -->
 
 <!-- ^apply-taint -->
 		<dict>
@@ -705,9 +701,7 @@
 				</dict>
 			</array>
 		</dict>
-<!-- end update -->
-		
-<!-- start update -->
+
 <!-- ^for -->
 		<dict>
 			<key>ID</key>
@@ -718,6 +712,18 @@
 			<string>[i](;){}</string>
 			<key>MoveCursor</key>
 			<integer>4</integer>
+		</dict>
+
+<!-- ^form -->
+		<dict>
+			<key>ID</key>
+			<string>^form</string>
+			<key>String</key>
+			<string>^form</string>
+			<key>PostString</key>
+			<string>:</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
 		</dict>
 
 <!-- ^hash -->
@@ -1630,9 +1636,6 @@
 			<key>MoveCursor</key>
 			<integer>1</integer>
 		</dict>
-<!-- end update -->
-
-<!-- #################################################################################### -->
 
 <!-- ^table -->
 		<dict>
@@ -1685,7 +1688,6 @@
 			</array>
 		</dict>
 
-		
 <!-- ^throw -->
 		<dict>
 			<key>ID</key>
@@ -1988,10 +1990,8 @@
 		</dict>
 
 
-<!-- ??? ^xdoc -->
+<!-- ^xdoc -->
 
-
-		<!-- start update -->
 
 		<!-- $._default -->
 				<dict>
@@ -4506,7 +4506,6 @@
 					<string>.yearday</string>
 				</dict>
 
-		
 		<!-- @top -->
 
 		<!-- @auto -->
@@ -4635,7 +4634,6 @@
 				<string>@USE</string>
 			</dict>
 
-		<!-- end update -->
 		
 	</array>
 
