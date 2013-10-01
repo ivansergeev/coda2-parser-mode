@@ -1,5 +1,8 @@
 #Coda 2 Parser Mode
 
+
+Parser 3 syntax support for the editor Coda 2 (Mac)
+
 ##Requirements
 
 Coda 2 (http://panic.com/coda/), Parser 3.4.2 (http://www.parser.ru/en/, http://parser.ru)
