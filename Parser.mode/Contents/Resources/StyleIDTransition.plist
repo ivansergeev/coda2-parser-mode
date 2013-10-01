@@ -26,7 +26,8 @@
 
 	<key>/Parser/P3 Variables</key>
 	<string>_Default.Keywords</string>
-
+	<key>/Parser/P3 Call Variables</key>
+	<string>_Default.Keywords</string>
 
 	<key>/Parser/P3 Numbers</key>
 	<string>_Default.Numbers</string>

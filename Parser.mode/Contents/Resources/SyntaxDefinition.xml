@@ -78,12 +78,12 @@
 			</state> -->
 
 			<keywords id="P3 Variables" casesensitive="yes" useforautocomplete="yes" scope="language.variable.strings.p3">
+		        <regex>(\$\w[\w\d\-]{,64})</regex>
+		        <regex>(\$\{\w[\w\d\-]{,64}\}?)</regex>
+			</keywords>
 
-				<!-- $variable -->
-				<regex>(\$[\w\.]{1,512})</regex>
-				<!-- ${variable} -->
-				<regex>(\$\{[\w\.]{1,512}\}?)</regex>
-				
+			<keywords id="P3 Call Variables" casesensitive="yes" useforautocomplete="yes" scope="language.variable.strings.p3">
+		        <regex>(\^\w[\w\d\-]{,64}[^\[])</regex>
 			</keywords>
 
 			<!--
@@ -128,17 +128,17 @@
 			</state>
 
 			<!-- ^rem{"comment"} -->
-			<state id="P3 Autodoc Comment" type="comment" scope="comment.block.documentation.p3">
+			<!-- <state id="P3 Autodoc Comment" type="comment" scope="comment.block.documentation.p3">
 				<begin><regex>\^rem{"</regex></begin>
 				<end><regex>"\}</regex></end>
-			</state>
+			</state> -->
 			
-			<!--
-			<state id="P3 TODO" type="comment" scope="comment.bookmark.p3">
-				<begin><regex>^#TODO</regex></begin>
+			
+			<state id="Pragma marks" type="comment" scope="comment.bookmark.p3" image="SymbolMark" indentation="0" ignoreblocks="yes" show-in-comments="yes">
+				<begin><regex>#!</regex></begin>
 				<end><regex>[\n\r]</regex></end>
 			</state>
-			-->
+			
 
 			<!--
 			<state id="P3 RegExp" type="string" scope="string.regex.p3">

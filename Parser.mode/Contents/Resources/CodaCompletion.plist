@@ -718,11 +718,6 @@
 			<string>[i](;){}</string>
 			<key>MoveCursor</key>
 			<integer>4</integer>
-			<key>Parameters</key>
-			<array>
-				<string>start</string>
-				<string>finish</string>
-			</array>
 		</dict>
 
 <!-- ^hash -->
@@ -4523,7 +4518,7 @@
 				<key>PostString</key>
 				<string>[]</string>
 				<key>SelectionRange</key>
-				<string>{8, 0}</string>
+				<string>{7, 0}</string>
 			</dict>
 
 		<!-- @BASE -->
@@ -4532,10 +4527,6 @@
 					<string>@BASE</string>
 					<key>String</key>
 					<string>@BASE</string>
-					<key>PostString</key>
-					<string></string>
-					<key>SelectionRange</key>
-					<string>{6, 0}</string>
 				</dict>
 
 		<!-- @CLASS -->
@@ -4544,10 +4535,6 @@
 					<string>@CLASS</string>
 					<key>String</key>
 					<string>@CLASS</string>
-					<key>PostString</key>
-					<string></string>
-					<key>SelectionRange</key>
-					<string>{7, 0}</string>
 				</dict>
 
 		<!-- @GET -->
@@ -4565,7 +4552,7 @@
 					<key>PostString</key>
 					<string>[]</string>
 					<key>SelectionRange</key>
-					<string>{15, 0}</string>
+					<string>{14, 0}</string>
 				</dict>
 				<dict>
 					<key>ID</key>
@@ -4575,74 +4562,78 @@
 					<key>PostString</key>
 					<string>[]</string>
 					<key>SelectionRange</key>
-					<string>{7, 0}</string>
+					<string>{6, 0}</string>
 				</dict>
 
-		<!-- @static -->
-				<dict>
-					<key>ID</key>
-					<string>@static</string>
-					<key>String</key>
-					<string>@static</string>
-					<key>PostString</key>
-					<string>:</string>
-					<key>SelectionRange</key>
-					<string>{8, 0}</string>
-				</dict>
+		<!-- @main -->
+			<dict>
+				<key>ID</key>
+				<string>@main</string>
+				<key>String</key>
+				<string>@main</string>
+				<key>PostString</key>
+				<string>[]</string>
+				<key>SelectionRange</key>
+				<string>{7, 0}</string>
+			</dict>
 
 		<!-- @OPTIONS -->
-				<dict>
-					<key>ID</key>
-					<string>@OPTIONS</string>
-					<key>String</key>
-					<string>@OPTIONS</string>
-					<key>PostString</key>
-					<string></string>
-					<key>SelectionRange</key>
-					<string>{9, 0}</string>
-				</dict>
+			<dict>
+				<key>ID</key>
+				<string>@OPTIONS</string>
+				<key>String</key>
+				<string>@OPTIONS</string>
+			</dict>
+
+		<!-- @static -->
+			<dict>
+				<key>ID</key>
+				<string>@static</string>
+				<key>String</key>
+				<string>@static</string>
+				<key>PostString</key>
+				<string>:</string>
+				<key>MoveCursor</key>
+				<integer>1</integer>
+			</dict>
 
 		<!-- @SET -->
-				<dict>
-					<key>ID</key>
-					<string>@SET_</string>
-					<key>String</key>
-					<string>@SET_</string>
-				</dict>
-				<dict>
-					<key>ID</key>
-					<string>@SET_DEFAULT</string>
-					<key>String</key>
-					<string>@SET_DEFAULT</string>
-					<key>PostString</key>
-					<string>[;]</string>
-					<key>SelectionRange</key>
-					<string>{13, 0}</string>
-				</dict>
+			<dict>
+				<key>ID</key>
+				<string>@SET_</string>
+				<key>String</key>
+				<string>@SET_</string>
+			</dict>
+			<dict>
+				<key>ID</key>
+				<string>@SET_DEFAULT</string>
+				<key>String</key>
+				<string>@SET_DEFAULT</string>
+				<key>PostString</key>
+				<string>[;]</string>
+				<key>SelectionRange</key>
+				<string>{13, 0}</string>
+			</dict>
 
-		<!-- @unhandled_exception -->
-				<dict>
-					<key>ID</key>
-					<string>@unhandled_exception</string>
-					<key>String</key>
-					<string>@unhandled_exception</string>
-					<key>PostString</key>
-					<string>[exception;stack]</string>
-					<key>SelectionRange</key>
-					<string>{38, 0}</string>
-				</dict>
+	<!-- @unhandled_exception -->
+			<dict>
+				<key>ID</key>
+				<string>@unhandled_exception</string>
+				<key>String</key>
+				<string>@unhandled_exception</string>
+				<key>PostString</key>
+				<string>[exception;stack]</string>
+				<key>SelectionRange</key>
+				<string>{37, 0}</string>
+			</dict>
 
-		<!-- @USE -->
-				<dict>
-					<key>ID</key>
-					<string>@USE</string>
-					<key>String</key>
-					<string>@USE</string>
-					<key>PostString</key>
-					<string></string>
-					<key>SelectionRange</key>
-					<string>{5 , 0}</string>
-				</dict>
+	<!-- @USE -->
+			<dict>
+				<key>ID</key>
+				<string>@USE</string>
+				<key>String</key>
+				<string>@USE</string>
+			</dict>
 
 		<!-- end update -->
 		

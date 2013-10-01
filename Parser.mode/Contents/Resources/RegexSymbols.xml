@@ -2,7 +2,6 @@
 <!DOCTYPE syntax SYSTEM "symbol.dtd">
 <symbols>
 
-
     <!-- Parser -->
 
     <blocks>
@@ -10,19 +9,19 @@
         <endregex>}</endregex>
     </blocks>
 
-
-    <!-- find: $variable -->
-    
+	
     <symbol id="P3 Variables" indentation="0" useforautocomplete="yes" hidden="yes">
-        <!-- $variable $variable.variable -->
-        <regex>(\$[\w\.]{1,512})</regex>
-        <!-- ${variable} ${variable.variable} -->
-        <regex>(\$\{[\w\.]{1,512}\}?)</regex>
+    	<!-- $variable ${variable} -->
+        <regex>(\$\w[\w\d\-]{,64})</regex>
+        <regex>(\$\{\w[\w\d\-]{,64}\}?)</regex> 
     </symbol>
 
-    <!-- 
-        <symbol id="P3 Call Variables" indentation="0" useforautocomplete="yes" hidden="yes"></symbol>  
-    -->
+	
+    <symbol id="P3 Call Variables" indentation="0" useforautocomplete="yes" hidden="yes">
+		 <!-- ^variable -->
+		 <regex>(\^\w[\w\d\-]{,512}[^\[])</regex> 
+	</symbol>  
+
 
     <symbol id="P3 Base Classes" image="SymbolC" indentation="0" ignoreblocks="no" useforautocomplete="no">
 
@@ -51,7 +50,7 @@
        <!-- <regex>^\@(?!CLASS|USE|auto\[)(?'name'\w{1,512}\[(?'arguments'[^\]]{0,512})\])</regex> -->
 
        <!-- find: @method[], exclude: @CLASS, @USE, @OPTIONS, @BASE, @auto[ -->
-       <regex>^\@(?!CLASS|USE|OPTIONS|BASE|auto\[)(?'name'\w{1,512})</regex>
+       <regex>^\@(?!CLASS|USE|OPTIONS|BASE|auto\[)(?'name'[\w\d]{1,512})\[</regex>
 
         <postprocess>
             <!-- <find>[\n\r]</find> -->
@@ -69,24 +68,26 @@
         <poststring>[]</poststring>
 
         <!-- with arguments -->
-        <arguments>([\^\$\:\.\w\d\-]+)[;]*</arguments>
+        <!-- <arguments>([\^\$\:\.\w\d\-]+)[;]*</arguments> -->
         <!-- <variables>(?'name'[\w\d]{1,512})</variables> -->
 
     </symbol>
 
 
     <!-- P3 TODO -->
-    <!--
-    <symbol id="P3 TODO" font-weight="bold" font-style="normal" image="SymbolD" indentation="0" ignoreblocks="yes" show-in-comments="yes">
-        <beginregex>^#(TODO)</beginregex>
+
+    <symbol id="Pragma marks" font-weight="bold" font-style="normal" image="SymbolD" indentation="0" ignoreblocks="yes" show-in-comments="yes">
+        <beginregex>#!</beginregex>
         <endregex>[\n\r]</endregex>
     </symbol>
-    -->
+
 
     <!-- Коментарий сроки -->
     <!-- find: # comment -->
     <symbol id="Pragma Marks Single" font-weight="normal" font-style="normal" image="SymbolMark" indentation="0" ignoreblocks="yes" show-in-comments="yes">
-		 <regex>^#\s*!([^\n\r]+)</regex>
+		 <!-- <regex>^#\s*!([^\n\r]+)</regex> -->
+		<begin><regex>#</regex></begin>
+		<end><regex>[\r\n]</regex></end>
     </symbol>
 
     <!-- Коментарий в конце кода -->
