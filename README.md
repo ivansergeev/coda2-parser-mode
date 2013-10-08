@@ -21,6 +21,7 @@ Coda 2 (http://panic.com/coda/), Parser 3.4.2 (http://www.parser.ru/en/, http://
 ##Features
 
 Include custom variables: $CONNECT_STRING, $TIME
+and operators: ^default[a;b]
 
 ##License
 

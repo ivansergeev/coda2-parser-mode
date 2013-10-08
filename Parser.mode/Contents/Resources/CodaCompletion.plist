@@ -408,6 +408,18 @@
 			</array>
 		</dict>
 
+<!-- ^default -->
+		<dict>
+			<key>ID</key>
+			<string>^default</string>
+			<key>String</key>
+			<string>^default</string>
+			<key>PostString</key>
+			<string>[;]</string>
+			<key>MoveCursor</key>
+			<integer>1</integer>
+		</dict>
+
 <!-- ^double -->
 		<dict>
 			<key>ID</key>
@@ -2949,7 +2961,7 @@
 							<array>
 								<dict>
 									<key>String</key>
-									<string>uft-8</string>
+									<string>utf-8</string>
 									<key>MoveCursor</key>
 									<integer>1</integer>
 								</dict>
@@ -3019,7 +3031,7 @@
 							<array>
 								<dict>
 									<key>String</key>
-									<string>uft-8</string>
+									<string>utf-8</string>
 									<key>MoveCursor</key>
 									<integer>1</integer>
 								</dict>
@@ -3116,6 +3128,10 @@
 						<dict>
 							<key>String</key>
 							<string>end</string>
+						</dict>
+						<dict>
+							<key>String</key>
+							<string>now</string>
 						</dict>
 						<dict>
 							<key>String</key>
