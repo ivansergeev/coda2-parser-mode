@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE syntax SYSTEM "settings.dtd">
 <settings>
     <recognition>
         <extension>p</extension>
 	    <extension>pt</extension>
-        <extension>h</extension>
 		<extension>html</extension>
     </recognition>
 </settings>

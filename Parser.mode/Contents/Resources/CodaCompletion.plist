@@ -1578,6 +1578,15 @@
 			</array>
 		</dict>
 
+<!-- ^result -->
+		<dict>
+			<key>ID</key>
+			<string>^result</string>
+			<key>String</key>
+			<string>^result</string>
+		</dict>
+
+
 <!-- ^string -->
 		<dict>
 			<key>ID</key>
@@ -2894,7 +2903,19 @@
 						</dict>
 					</array>
 				</dict>
-
+		
+		<!-- $match -->
+				<dict>
+					<key>ID</key>
+					<string>$match</string>
+					<key>String</key>
+					<string>$match</string>
+					<key>PostString</key>
+					<string>.</string>
+					<key>MoveCursor</key>
+					<integer>1</integer>
+				</dict>
+		
 		<!-- $math -->
 				<dict>
 					<key>ID</key>
@@ -4168,9 +4189,9 @@
 				</dict>
 				<dict>
 					<key>ID</key>
-					<string>.rigth</string>
+					<string>.right</string>
 					<key>String</key>
-					<string>.rigth</string>
+					<string>.right</string>
 					<key>PostString</key>
 					<string>()</string>
 					<key>MoveCursor</key>
