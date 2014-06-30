@@ -5,8 +5,10 @@
 	
 	<key>Comments</key>
 	<dict>
-		<key>StartTag</key><string>^rem{</string>
-		<key>EndTag</key><string>}</string>
+		<key>StartTag</key>
+		<string>^rem{</string>
+		<key>EndTag</key>
+		<string>}</string>
 	</dict>
 
 
@@ -4194,6 +4196,8 @@
 					</array>
 				</dict>
 				<dict>
+					<key>Hint</key>
+					<string>Закрытие соединения с сервером</string>
 					<key>ID</key>
 					<string>.release[]</string>
 					<key>String</key>

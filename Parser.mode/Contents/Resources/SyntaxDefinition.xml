@@ -32,16 +32,16 @@
 			</keywords>
 
 			<keywords id="P3 Keywords" useforautocomplete="yes" casesensitive="yes" scope="keyword.control.p3">
-				<string>case</string>
-				<string>for</string>
-				<string>if</string>
+				<string>^case</string>
+				<string>^for</string>
+				<string>^if</string>
 				<string>is</string>
 				<string>public</string>
 				<string>result</string>
 				<string>static</string>
 				<string>switch</string>
-				<string>try</string>
-				<string>while</string>
+				<string>^try</string>
+				<string>^while</string>
 			</keywords>
 
 			<keywords id="P3 Base Classes" useforautocomplete="yes" scope="support.class.standard.p3">
@@ -96,7 +96,7 @@
 				<end><regex>}</regex></end>
 			</state>
 
-			<!-- #! text -->
+			<!-- #! text  -->
 			<state id="P3 Pragma marks" type="comment" scope="comment.bookmark.p3" image="SymbolMark" indentation="0" ignoreblocks="yes" show-in-comments="yes">
 				<begin><string>^#!</string></begin>
 				<end><regex>[\n\r]</regex></end>
