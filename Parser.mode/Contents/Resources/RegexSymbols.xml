@@ -84,24 +84,27 @@
 
     <!-- Коментарий сроки -->
     <!-- find: # comment -->
+	<!--
     <symbol id="Pragma Marks Single" font-weight="normal" font-style="normal" image="SymbolMark" indentation="0" ignoreblocks="yes" show-in-comments="yes">
-		 <!-- <regex>^#\s*!([^\n\r]+)</regex> -->
-		<begin><regex>#</regex></begin>
+		<begin><regex>^#</regex></begin>
 		<end><regex>[\r\n]</regex></end>
     </symbol>
-
+-->
     <!-- Коментарий в конце кода -->
     <!-- find: code ^rem{ comment } -->
+   	<!--
     <symbol id="Pragma Marks Inside Block" font-weight="normal" font-style="normal" image="SymbolMark" indentation="0" ignoreblocks="no" show-in-comments="yes">
         <regex>[^(\^rem\{)]\^rem\{!(.*)\}</regex>
     </symbol>
-
+		-->
      <!-- Коментарий блока -->
      <!-- find: ^rem{ ... } -->
+	 <!--
     <symbol id="Pragma Marks Block" font-weight="normal" font-style="normal" image="SymbolMark" indentation="0" ignoreblocks="no" show-in-comments="yes">
         <beginregex>^\^rem\{</beginregex>
         <endregex>^}</endregex>
     </symbol>
-
+		 -->
+		 
 </symbols>
 

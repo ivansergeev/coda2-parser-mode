@@ -29,35 +29,55 @@
 				<key>Type</key>
 				<string>P3 Base Classes</string>
 			</dict>
+			<!--
 			<dict>
 				<key>State</key>
 				<string>SEEMode.Parser</string>
 				<key>Type</key>
 				<string>P3 Classes</string>
 			</dict>
+			-->
+			<!--
 			<dict>
 				<key>State</key>
 				<string>SEEMode.Parser</string>
 				<key>Type</key>
 				<string>P3 Types</string>
 			</dict>
+			-->
+				
 			<dict>
 				<key>State</key>
 				<string>SEEMode.Parser</string>
 				<key>Type</key>
-				<string>P3 Variable</string>
+				<string>P3 Keywords</string>
 			</dict>
+			
+			<dict>
+				<key>State</key>
+				<string>SEEMode.Parser</string>
+				<key>Type</key>
+				<string>P3 Variables</string>
+			</dict>
+			<dict>
+				<key>State</key>
+				<string>SEEMode.Parser</string>
+				<key>Type</key>
+				<string>P3 Call Variables</string>
+			</dict>
+			<!--
 			<dict>
 				<key>State</key>
 				<string>SEEMode.Parser</string>
 				<key>Type</key>
 				<string>P3 Attributes</string>
 			</dict>
+			-->
 			<dict>
 				<key>State</key>
 				<string>SEEMode.Parser</string>
 				<key>Type</key>
-				<string>P3 Method</string>
+				<string>P3 User Method</string>
 			</dict>
 		</array>
 	</dict>
@@ -233,7 +253,7 @@
 			<string>^cache</string>
 		</dict>
 
-<!-- ^connect -->
+<!-- ^connect[connect-string] (custom) -->
 		<dict>
 			<key>ID</key>
 			<string>^connect[$CONNECT_STRING]</string>
@@ -408,7 +428,7 @@
 			</array>
 		</dict>
 
-<!-- ^default -->
+<!-- ^default (custom) -->
 		<dict>
 			<key>ID</key>
 			<string>^default</string>
@@ -3126,14 +3146,16 @@
 					</array>
 				</dict>
 
-		<!-- $TIME (custom)-->
+		<!-- $Time (custom)-->
 				<dict>
+					<key>Hint</key>
+					<string>custom class</string>
 					<key>ID</key>
-					<string>$TIME</string>
+					<string>$Time</string>
 					<key>String</key>
-					<string>$TIME</string>
+					<string>$Time</string>
 					<key>PostString</key>
-					<string>.</string>
+					<string>:</string>
 					<key>MoveCursor</key>
 					<integer>1</integer>
 					<key>Children</key>
@@ -3144,7 +3166,11 @@
 						</dict>
 						<dict>
 							<key>String</key>
-							<string>date</string>
+							<string>baseSql</string>
+						</dict>
+						<dict>
+							<key>String</key>
+							<string>baseDate</string>
 						</dict>
 						<dict>
 							<key>String</key>
@@ -3156,11 +3182,11 @@
 						</dict>
 						<dict>
 							<key>String</key>
-							<string>start</string>
+							<string>nowSql</string>
 						</dict>
 						<dict>
 							<key>String</key>
-							<string>string</string>
+							<string>start</string>
 						</dict>
 					</array>
 				</dict>

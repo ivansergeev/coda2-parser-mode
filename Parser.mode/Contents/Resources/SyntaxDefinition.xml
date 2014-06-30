@@ -5,19 +5,21 @@
 	<head>
 		<!-- The definitions title -->
 		<name>Parser</name>
+		<!-- <autocompleteoptions use-spelling-dictionary="yes" /> -->
 		<!-- Valid Characters for Variables -->
 		<charsintokens><![CDATA[_-0987654321abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ]]></charsintokens>
 		<!-- <charsdelimitingtokens></charsdelimitingtokens> -->
 	</head>
 
 	<states>
-	
-	   <default id="Base" scope="meta.default">
 
-			<import mode="XML" keywords-only="yes" />
-			<import mode="SQL" keywords-only="yes" />
+  		  <default id="Base" containerState="no" usesymbolsfrommode="Parser" useautocompletefrommode="Parser" scope="meta.default" foldable="yes" usespellchecking="no">
 
-			<keywords id="P3 Types" useforautocomplete="yes" scope="keyword.type.p3">
+ 			<import mode="XML" keywords-only="yes" />
+ 			<!-- <import mode="SQL" keywords-only="yes" /> -->
+		   
+
+			<keywords id="P3 Types" useforautocomplete="yes" casesensitive="yes" scope="keyword.type.p3">
 				<string>bool</string>
 				<string>double</string>
 				<string>false</string>
@@ -29,7 +31,7 @@
 				<string>void</string>
 			</keywords>
 
-			<keywords id="P3 Keywords" useforautocomplete="yes" casesensitive="no" scope="keyword.control.p3">
+			<keywords id="P3 Keywords" useforautocomplete="yes" casesensitive="yes" scope="keyword.control.p3">
 				<string>^case</string>
 				<string>^for</string>
 				<string>^if</string>
@@ -39,14 +41,14 @@
 				<string>static</string>
 				<string>^switch</string>
 				<string>^try</string>
-				<string>^while</string>				
+				<string>^while</string>
 			</keywords>
 
 			<keywords id="P3 Base Classes" useforautocomplete="yes" scope="support.class.standard.p3">
 				<regex>^(\@(CLASS|USE|OPTIONS|BASE|auto\[\w*\]))[\n\r]</regex>
 			</keywords>
-			
-			  <keywords id="P3 Classes" useforautocomplete="yes" scope="support.class.standard.p3">
+		
+			<keywords id="P3 Classes" useforautocomplete="yes" scope="support.class.standard.p3">
 				<string>date</string>
 				<string>hash</string>
 				<string>math</string>
@@ -60,22 +62,14 @@
 				<regex>([\+\-\*\/\=\!\&lt;\&gt;\%])</regex>
 			</keywords>
 
-			<keywords id="P3 Numbers" inverted-color="#5d56ff" useforautocomplete="no" scope="constant.numeric">
+			<keywords id="P3 Numbers" useforautocomplete="no" scope="constant.numeric">
 				<regex>(?&lt;![\w\d\._])((?:(?:(?:[0-9]+\.[0-9]*)|(\.[0-9]+))(?:[eE][+\-]?[0-9]+)?[fFlL]?)|(?:(?:(?:[1-9][0-9]*)|0(?:[1-7][0-7]*)?|(?:0[xX][0-9a-fA-F]+))(?:(?:[uU][lL]?)|(?:[lL][uU]?))?))(?![\w\d\._])</regex>
 			</keywords>
 
-			<keywords id="Number Literals" inverted-color="#5d56ff" useforautocomplete="yes" scope="constant.numeric.keyword">
+			<keywords id="Number Literals" useforautocomplete="yes" casesensitive="yes" scope="constant.numeric.keyword">
 				<string>true</string>
 				<string>false</string>
 			</keywords>
-
-		   <!--  <state id="P3 String" type="string"  color="#825900"  scope="string.double">
-				<begin><regex>([^\=]"\w*")</regex></begin>
-				 <end><regex>[\n\r]</regex></end>
-			</state>
-			<state id="P3 Single String" type="string"  color="#825900"  scope="string.single">
-				<begin><regex>([^\=]'\w*')</regex></begin>
-			</state> -->
 
 			<keywords id="P3 Variables" casesensitive="yes" useforautocomplete="yes" scope="language.variable.strings.p3">
 		        <regex>(\$\w[\w\d\-]{,64})</regex>
@@ -86,80 +80,22 @@
 		        <regex>(\^\w[\w\d\-]{,64}[^\[])</regex>
 			</keywords>
 
-			<!--
-			 <keywords id="P3 Attributes" casesensitive="yes" useforautocomplete="yes" scope="language.variable.strings.p3"<name />
-				<regex>\$\w+{1,512}\.(_\w+{1,512})</regex>
-			</keywords>
-			-->
-
 			<keywords id="P3 User Method" useforautocomplete="yes" scope="language.function.p3">
-				<!-- @methodName -->
 				<regex>^\@(?!BASE|CLASS|USE|auto\[)(?'name'[\w]{1,512})</regex>
-				<!-- <beginregex>^\@(?!CLASS|USE|OPTIONS|BASE|auto\[)(?'name'\w{1,512})</beginregex> -->
-				<!-- <endregex>[\n\r]</endregex> -->
 			</keywords>
 
-			<!--
-			<keywords id="P3 Call User Method" useforautocomplete="no" scope="language.function.p3">
-				<regex>\^(\w+)\[(?'arguments'.*)\]?\z</regex>
-			</keywords>
-			-->
-
-			<!-- Comments -->
-			<!-- # comment -->
-            <state id="Singleline Comment" type="comment" scope="comment.line">
-				<begin><regex>#</regex></begin>
+			<state id="P3 Single Comment" type="comment" scope="comment.line">
+				<begin><regex>^#|##</regex></begin>
 				<end><regex>[\r\n]</regex></end>
-				<import mode="Base" state="EmailAndURLContainerState" keywords-only="yes"/>
+				<!-- <import mode="Base" state="EmailAndURLContainerState" keywords-only="yes"/> -->
 			</state>
-
+			
 			<!-- code ^rem{ comment }  -->
 			<state id="P3 Block Comment" type="comment" scope="comment.line.double-slash.p3">
-				<begin><regex>[^(\^rem\{)]\^rem\{</regex><autoend>[^(\^rem\{)]\^rem\{</autoend></begin>
-				<end><regex>\}</regex></end>
-<!--				 <import mode="Base" state="EmailAndURLContainerState" keywords-only="yes"/>
- -->			</state>
-
-			<!-- ^rem{ comment } -->
-			<state id="P3 Inline Comment" type="comment" scope="comment.line.double-slash.p3">
-				<begin><regex>^\^rem\{</regex><autoend>^\^rem\{</autoend></begin>
-				<end><regex>\}</regex></end>
-<!--				 <import mode="Base" state="EmailAndURLContainerState" keywords-only="yes"/> -->
-			</state>
-
-			<!-- ^rem{"comment"} -->
-			<!-- <state id="P3 Autodoc Comment" type="comment" scope="comment.block.documentation.p3">
-				<begin><regex>\^rem{"</regex></begin>
-				<end><regex>"\}</regex></end>
-			</state> -->
-			
-			
-			<state id="Pragma marks" type="comment" scope="comment.bookmark.p3" image="SymbolMark" indentation="0" ignoreblocks="yes" show-in-comments="yes">
-				<begin><regex>#!</regex></begin>
-				<end><regex>[\n\r]</regex></end>
-			</state>
-			
-
-			<!--
-			<state id="P3 RegExp" type="string" scope="string.regex.p3">
-				
-				<begin><regex>match\[</regex></begin>
-				<end><regex>\](\[[ixsmUgnu']*\])?</regex></end>
-
-				<state id="Escaped Characters" scope="string.regex.escaped.p3">
-					<begin><regex>\^</regex></begin>
-					<end><regex>.</regex></end>	
-				</state>
-
-			</state>
-			-->
-
-			<state id="Block" type="block" foldable="yes" indent="yes" scope="meta.block.curly">
-				<begin><regex>[^\$]{</regex><autoend>}</autoend></begin>
+				<begin><regex>\^rem{</regex><autoend>}</autoend></begin>
 				<end><regex>}</regex></end>
-				<import mode="Parser" />
 			</state>
-
+			
 		</default>
 
 	</states>

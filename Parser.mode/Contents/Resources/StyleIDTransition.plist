@@ -3,15 +3,22 @@
 <plist version="1.0">
 <dict>
 
+	<key>/CSS/CSS Attributes</key>
+	<string>_Default.Keywords</string>
+	<key>/CSS/CSS Colors</key>
+	<string>_Default.Keywords</string>
+	<key>/CSS/CSS Digits</key>
+	<string>_Default.Numbers</string>
+	<key>/CSS/CSS Keywords</key>
+	<string>_Default.Keywords</string>
+
+
 	<key>/Parser/P3 Characters</key>
 	<string>_Default.Characters</string>
-
 	<key>/Parser/P3 Types</key>
 	<string>_Default.Keywords</string>
 	<key>/Parser/P3 Keywords</key>
 	<string>_Default.Keywords</string>
-
-
 	<key>/Parser/P3 Base Classes</key>
 	<string>_Default.FunctionRegex</string>
 	<key>/Parser/P3 Classes</key>
@@ -51,9 +58,14 @@
 	<string>Comment</string>
 	<key>/Parser/P3 TODO Comment</key>
 	<string>Comment</string>
-	<key>/Parser/P3 Autodoc Comment</key>
-	<string>AutodocComment</string>
+	<key>/Parser/P3 Pragma marks</key>
+	<string>Comment</string>
+	
+	<!-- <key>/Parser/P3 Autodoc Comment</key> -->
+	<!-- <string>AutodocComment</string> -->
 
+
+			
 	<key>_Default</key>
 	<string>_Default</string>
 

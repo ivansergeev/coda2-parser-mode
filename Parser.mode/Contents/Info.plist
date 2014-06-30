@@ -12,11 +12,11 @@
 		https://github.com/ivansergeev/coda2-parser-mode
 	</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.0</string>
+	<string>4.0</string>
 	<key>CFBundleVersion</key>
-	<string>2.0</string>
+	<string>4.0</string>
 	<key>CFBundleGetInfoString</key>
-	<string>2.0, Copyright Ivan Sergeev (ivansergeev@gmail.com)</string>
+	<string>4.0, Copyright Ivan Sergeev (ivansergeev@gmail.com)</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleInfoDictionaryVersion</key>
