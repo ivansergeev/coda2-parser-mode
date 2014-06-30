@@ -35,8 +35,9 @@
         </postprocess>
     </symbol>
 
-   <!--  <symbol id="P3 Attributes" image="SymbolMark" indentation="0" ignoreblocks="no" useforautocomplete="yes">
-       <regex>\$\w+{1,512}\.(_\w+{1,512})</regex>
+   <!--
+	<symbol id="P3 Attributes" image="SymbolMark" indentation="0" ignoreblocks="no" useforautocomplete="yes">
+	 <regex>\$\w+{1,512}\.(_\w+{1,512})</regex>
     </symbol> -->
 
     <!-- 
@@ -75,12 +76,11 @@
 
 
     <!-- P3 TODO -->
-
-    <symbol id="Pragma marks" font-weight="bold" font-style="normal" image="SymbolD" indentation="0" ignoreblocks="yes" show-in-comments="yes">
-        <beginregex>#!</beginregex>
-        <endregex>[\n\r]</endregex>
+		
+    <symbol id="Pragma marks" font-weight="bold" font-style="normal" image="SymbolMark" indentation="0" ignoreblocks="yes" show-in-comments="yes">
+        <regex>^#!([^\n\r]+)</regex>
     </symbol>
-
+	
 
     <!-- Коментарий сроки -->
     <!-- find: # comment -->
