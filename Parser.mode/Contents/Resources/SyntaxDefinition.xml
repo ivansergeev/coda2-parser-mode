@@ -84,8 +84,8 @@
 				<regex>^\@(?!BASE|CLASS|USE|auto\[)(?'name'[\w]{1,512})</regex>
 			</keywords>
 
-			<state id="P3 Single Comment" type="comment" scope="comment.line">
-				<begin><regex>#[^!]</regex></begin>
+			<state id="P3 Single Comment" type="comment" scope="comment.line.parser">
+				<begin><regex>^#[^!]</regex></begin>
 				<end><regex>[\r\n]</regex></end>
 				<import mode="Base" state="EmailAndURLContainerState" keywords-only="yes"/>
 			</state>
@@ -98,7 +98,7 @@
 
 			<!-- #! text  -->
 			<state id="P3 Pragma marks" type="comment" scope="comment.bookmark.p3" image="SymbolMark" indentation="0" ignoreblocks="yes" show-in-comments="yes">
-				<begin><string>^#!</string></begin>
+				<begin><regex>^#!</regex></begin>
 				<end><regex>[\n\r]</regex></end>
 			</state>
 			
